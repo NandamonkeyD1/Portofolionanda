@@ -849,7 +849,7 @@ body {
 .portfolio-item {
     position: relative;
     border-radius: 1rem;
-    overflow: hidden;
+    overflow: absolute;
     background: rgba(51, 65, 85, 0.5);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1227,7 +1227,7 @@ body {
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 1.5rem;
-    overflow: hidden;
+    overflow: absolute;
     transition: all var(--transition-normal);
     opacity: 0;
     transform: translateY(30px);
@@ -1253,7 +1253,7 @@ body {
 .portfolio-image {
     position: relative;
     height: 280px;
-    overflow: hidden;
+    overflow: absolute;
     flex-shrink: 0;
 }
 
