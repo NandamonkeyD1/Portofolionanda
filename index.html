@@ -30,12 +30,68 @@
         </nav>
     </header>
 
+    <!-- METEOR RAIN ANIMATION -->
+    <div class="meteor-container">
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+    </div>
+
+    <!-- FLOATING PARTICLES -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
     <main>
         <!-- HERO SECTION -->
         <section id="hero" class="hero-section">
+            <!-- Meteor Shower Animation -->
+            <div class="meteor-shower">
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+            </div>
+            
+            <!-- Floating Particles -->
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            
             <div class="hero-content">
                 <div class="hero-avatar">
-                    <img src="profil.jpg" alt="Nanda Ari Wahyu Widagdo" class="avatar-image">
+                   <img src="profil.jpg" alt="Nanda Ari Wahyu Widagdo" class="avatar-image"> 
                 </div>
                 <div class="hero-text">
                     <p class="hero-greeting"></p>
@@ -247,11 +303,33 @@
         <section id="portfolio" class="portfolio-section section-padding">
             <div class="container">
                 <h2 class="section-title">Portofolio</h2>
-                <div class="portfolio-grid">
-                    <!-- Project 1 -->
-                    <div class="portfolio-card reveal-item">
+                
+                <!-- Portfolio Categories -->
+                <div class="portfolio-categories">
+                    <button class="category-btn active" onclick="showCategory('all')">
+                        <span class="category-icon">�</span>
+                        <span>Semua</span>
+                    </button>
+                    <button class="category-btn" onclick="showCategory('webdev')">
+                        <span class="category-icon">💻</span>
+                        <span>Web Development</span>
+                    </button>
+                    <button class="category-btn" onclick="showCategory('uiux')">
+                        <span class="category-icon">🎨</span>
+                        <span>UI/UX Design</span>
+                    </button>
+                    <button class="category-btn" onclick="showCategory('marketing')">
+                        <span class="category-icon">📱</span>
+                        <span>Digital Marketing</span>
+                    </button>
+                </div>
+
+                <!-- Portfolio Grid -->
+                <div class="portfolio-grid" id="portfolioGrid">
+                    <!-- Web Development Projects -->
+                    <div class="portfolio-card reveal-item" data-category="webdev">
                         <div class="portfolio-image">
-                            <img src="./raport.png" alt="E-Raport Taman Siswa">
+                            <img src="./raport.png" alt="E-Raport SMK">
                             <div class="portfolio-overlay">
                                 <a href="#" class="view-details-btn">View Details</a>
                             </div>
@@ -267,8 +345,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
-                    <div class="portfolio-card reveal-item">
+                    <div class="portfolio-card reveal-item" data-category="webdev">
                         <div class="portfolio-image">
                             <img src="./classroom.jpeg" alt="Sistem Classroom">
                             <div class="portfolio-overlay">
@@ -285,27 +362,46 @@
                             </div>
                         </div>
                     </div>
-                     <!-- Project 1 -->
-                    <div class="portfolio-card reveal-item">
+
+                    <div class="portfolio-card reveal-item" data-category="webdev">
                         <div class="portfolio-image">
-                        <img src="./best.png" alt="Best Tea Karanganyar">
+                            <img src="./pos.png" alt="Sistem POS Mesin Kasir Soto">
                             <div class="portfolio-overlay">
                                 <a href="#" class="view-details-btn">View Details</a>
                             </div>
                         </div>
                         <div class="portfolio-content">
-                            <h3 class="portfolio-title">Pembuatan Logo Best Tea Karanganyar</h3>
-                            <p class="portfolio-description">Pembuatan Logo sebagai identitas brand</p>
+                            <h3 class="portfolio-title">Sistem POS Mesin Kasir Soto</h3>
+                            <p class="portfolio-description">Aplikasi Point of Sale khusus untuk warung soto dengan fitur manajemen menu, transaksi, dan laporan penjualan</p>
                             <div class="portfolio-tech">
-                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">JavaScript</span>
                             </div>
                         </div>
                     </div>
 
+                    <div class="portfolio-card reveal-item" data-category="webdev">
+                        <div class="portfolio-image">
+                            <img src="./katalogpapanreklame.png" alt="Katalog Pemesanan Papan Reklame">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="view-details-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Katalog Pemesanan Papan Reklame</h3>
+                            <p class="portfolio-description">Platform digital untuk pemesanan dan kustomisasi papan reklame dengan sistem katalog produk dan manajemen pesanan</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">jQuery</span>
+                            </div>
+                        </div>
+                    </div>
 
-
-                    <!-- Project 4 -->
-                    <div class="portfolio-card reveal-item">
+                    <div class="portfolio-card reveal-item" data-category="webdev">
                         <div class="portfolio-image">
                             <img src="./ecommerce.jpeg" alt="E-commerce Platform">
                             <div class="portfolio-overlay">
@@ -319,6 +415,207 @@
                                 <span class="tech-tag">Laravel</span>
                                 <span class="tech-tag">Vue.js</span>
                                 <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UI/UX Design Projects -->
+                    <div class="portfolio-card reveal-item" data-category="uiux">
+                        <div class="portfolio-image">
+                            <img src="./designUIUX.png" alt="UI/UX Design Interface">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="view-details-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">UI/UX Design Interface</h3>
+                            <p class="portfolio-description">Perancangan antarmuka pengguna yang intuitif dan menarik untuk aplikasi mobile dan web dengan fokus user experience</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">UI/UX Design</span>
+                                <span class="tech-tag">Prototyping</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card reveal-item" data-category="uiux">
+                        <div class="portfolio-image">
+                            <img src="./ecommerce.jpeg" alt="E-commerce Platform Design">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="view-details-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">E-commerce Platform Design</h3>
+                            <p class="portfolio-description">Desain UI/UX untuk platform e-commerce dengan fokus pada user journey dan conversion optimization</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">User Research</span>
+                                <span class="tech-tag">Wireframing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card reveal-item" data-category="uiux">
+                        <div class="portfolio-image">
+                            <img src="./mobileapp.png" alt="Mobile App Design">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="view-details-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Mobile App UI Design</h3>
+                            <p class="portfolio-description">Desain antarmuka aplikasi mobile dengan pendekatan user-centered design dan modern interface</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Mobile Design</span>
+                                <span class="tech-tag">User Testing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card reveal-item" data-category="uiux">
+                        <div class="portfolio-image">
+                            <img src="./dashboardadmin.png" alt="Dashboard Design">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="view-details-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Dashboard & Admin Panel Design</h3>
+                            <p class="portfolio-description">Perancangan dashboard admin yang user-friendly dengan data visualization yang efektif</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Data Visualization</span>
+                                <span class="tech-tag">Admin Panel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Digital Marketing Projects -->
+                    <div class="portfolio-card reveal-item" data-category="marketing">
+                        <div class="portfolio-image">
+                            <img src="./best.png" alt="Best Tea Karanganyar Logo">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="view-details-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Logo Design - Best Tea Karanganyar</h3>
+                            <p class="portfolio-description">Pembuatan logo sebagai identitas brand untuk bisnis minuman teh dengan konsep modern dan memorable</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Adobe Illustrator</span>
+                                <span class="tech-tag">Brand Identity</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card reveal-item" data-category="marketing">
+                        <div class="portfolio-image">
+                            <img src="./katalogpapanreklame.png" alt="Katalog Pemesanan Papan Reklame">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="view-details-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Katalog Pemesanan Papan Reklame</h3>
+                            <p class="portfolio-description">Platform digital untuk pemesanan dan kustomisasi papan reklame dengan sistem katalog produk dan manajemen pesanan</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">jQuery</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card reveal-item" data-category="marketing">
+                        <div class="portfolio-image">
+                            <img src="./videopembelajaran.png" alt="Video Pembelajaran">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="view-details-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Video Pembelajaran Interaktif</h3>
+                            <p class="portfolio-description">Pembuatan konten video pembelajaran dengan motion graphics dan visual effects yang menarik untuk edukasi</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">After Effects</span>
+                                <span class="tech-tag">CapCut</span>
+                                <span class="tech-tag">Motion Graphics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card reveal-item" data-category="marketing">
+                        <div class="portfolio-image">
+                            <img src="./videotipography.png" alt="Video Typography">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="view-details-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Video Typography & Motion Graphics</h3>
+                            <p class="portfolio-description">Pembuatan video dengan fokus typography dan motion graphics untuk konten media sosial dan promosi</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">After Effects</span>
+                                <span class="tech-tag">Typography</span>
+                                <span class="tech-tag">Motion Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card reveal-item" data-category="marketing">
+                        <div class="portfolio-image">
+                            <img src="./kontenkreator.png" alt="Content Creation">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="view-details-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Content Creation & Editing</h3>
+                            <p class="portfolio-description">Pembuatan dan editing konten visual untuk berbagai platform digital dengan fokus engagement dan brand awareness</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Photoshop</span>
+                                <span class="tech-tag">Canva</span>
+                                <span class="tech-tag">Video Editing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card reveal-item" data-category="marketing">
+                        <div class="portfolio-image">
+                            <img src="./mediamanagement.png" alt="Social Media Management">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="view-details-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Social Media Management</h3>
+                            <p class="portfolio-description">Pengelolaan media sosial dengan strategi konten yang engaging dan peningkatan brand awareness</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Instagram</span>
+                                <span class="tech-tag">Facebook</span>
+                                <span class="tech-tag">Content Planning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card reveal-item" data-category="marketing">
+                        <div class="portfolio-image">
+                            <img src="./seo.png" alt="SEO & Analytics">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="view-details-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">SEO & Digital Analytics</h3>
+                            <p class="portfolio-description">Optimasi SEO dan analisis performa digital marketing untuk meningkatkan visibility dan conversion</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Google Analytics</span>
+                                <span class="tech-tag">SEO</span>
+                                <span class="tech-tag">Data Analysis</span>
                             </div>
                         </div>
                     </div>
@@ -337,7 +634,7 @@
                     <div class="contact-info">
                         <h3>Hubungi Saya</h3>
                         <div class="contact-links">
-                            <a href="mailto:ndaariwahyu07@gmail.com" class="contact-btn">
+                            <a href="mailto:nandaariwahyu07@gmail.com" class="contact-btn">
                                 <span class="contact-icon">✉</span>
                                 <span>nandaariwahyu07@gmail.com</span>
                             </a>

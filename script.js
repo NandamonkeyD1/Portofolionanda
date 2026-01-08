@@ -482,3 +482,177 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(formStyle);
+
+// ===== PORTFOLIO CATEGORY FUNCTIONALITY =====
+function showCategory(category) {
+    // Update active button
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Find and activate the clicked button
+    const activeBtn = document.querySelector(`[onclick="showCategory('${category}')"]`);
+    if (activeBtn) {
+        activeBtn.classList.add('active');
+    }
+    
+    // Show/hide portfolio items
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    portfolioCards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'block';
+            setTimeout(() => {
+                card.classList.add('visible');
+            }, 100);
+        } else {
+            card.classList.remove('visible');
+            setTimeout(() => {
+                card.style.display = 'none';
+            }, 300);
+        }
+    });
+}
+
+// Initialize portfolio
+document.addEventListener('DOMContentLoaded', () => {
+    // Show all items by default
+    showCategory('all');
+    
+    // Add reveal animation to portfolio cards
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    portfolioCards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add('visible');
+        }, index * 100);
+    });
+});
+
+// ===== METEOR RAIN ANIMATION =====
+function createMeteor() {
+    const meteorContainer = document.querySelector('.meteor-container');
+    if (!meteorContainer) return;
+    
+    const meteor = document.createElement('div');
+    meteor.className = 'meteor';
+    
+    // Random position and animation duration
+    const leftPosition = Math.random() * 100;
+    const animationDuration = Math.random() * 3 + 2; // 2-5 seconds
+    const delay = Math.random() * 2; // 0-2 seconds delay
+    
+    meteor.style.left = leftPosition + '%';
+    meteor.style.animationDuration = animationDuration + 's';
+    meteor.style.animationDelay = delay + 's';
+    
+    meteorContainer.appendChild(meteor);
+    
+    // Remove meteor after animation
+    setTimeout(() => {
+        if (meteor.parentNode) {
+            meteor.parentNode.removeChild(meteor);
+        }
+    }, (animationDuration + delay) * 1000);
+}
+
+// Create meteors periodically
+function startMeteorRain() {
+    setInterval(createMeteor, 800); // Create new meteor every 800ms
+}
+
+// Initialize meteor rain
+document.addEventListener('DOMContentLoaded', () => {
+    startMeteorRain();
+});
+
+// ===== FLOATING PARTICLES ANIMATION =====
+function animateParticles() {
+    const particles = document.querySelectorAll('.particle');
+    
+    particles.forEach((particle, index) => {
+        const randomTop = Math.random() * window.innerHeight;
+        const randomDelay = Math.random() * 6;
+        
+        particle.style.top = randomTop + 'px';
+        particle.style.animationDelay = randomDelay + 's';
+    });
+}
+
+// Initialize particles
+document.addEventListener('DOMContentLoaded', () => {
+    animateParticles();
+    
+    // Re-animate particles on window resize
+    window.addEventListener('resize', animateParticles);
+});
+
+// ===== ENHANCED SCROLL ANIMATIONS =====
+// Enhanced reveal animation with stagger effect
+function enhancedRevealAnimation() {
+    const revealElements = document.querySelectorAll('.reveal-item');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 100); // Stagger animation by 100ms
+                
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    revealElements.forEach(element => {
+        revealObserver.observe(element);
+    });
+}
+
+// Initialize enhanced animations
+document.addEventListener('DOMContentLoaded', () => {
+    enhancedRevealAnimation();
+});
+
+// ===== PERFORMANCE OPTIMIZATIONS =====
+// Throttle function for better performance
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    }
+}
+
+// Debounce function for resize events
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Optimized scroll handler
+const optimizedScrollHandler = throttle(() => {
+    handleScroll();
+}, 16); // ~60fps
+
+window.addEventListener('scroll', optimizedScrollHandler);
+
+// Optimized resize handler
+const optimizedResizeHandler = debounce(() => {
+    animateParticles();
+}, 250);
+
+window.addEventListener('resize', optimizedResizeHandler);
