@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setTimeout(typeWriter, 1800);
 
-    // ===== METEOR SHOWER - REFINED =====
+    // ===== METEOR SHOWER - OPTIMIZED =====
     function createMeteor() {
         const meteorField = document.querySelector('.meteor-field');
         if (!meteorField) return;
@@ -59,10 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 6000);
     }
 
-    // Create meteors less frequently for calm effect
-    setInterval(createMeteor, 4000);
+    // OPTIMIZED: Reduced frequency from 4s to 8s
+    setInterval(createMeteor, 8000);
 
-    // ===== SHOOTING STARS (Background) =====
+    // ===== SHOOTING STARS (Background) - OPTIMIZED =====
     function createShootingStar() {
         const shootingStars = document.querySelector('.shooting-stars');
         if (!shootingStars) return;
@@ -84,12 +84,48 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
 
-    // Create shooting stars periodically
-    setInterval(createShootingStar, 4000);
+    // OPTIMIZED: Reduced frequency from 4s to 10s
+    setInterval(createShootingStar, 10000);
     
-    // Create initial shooting stars
+    // Create initial shooting star (reduced from 3 to 1)
+    setTimeout(createShootingStar, 1000);
+
+    // ===== AVATAR PARTICLES =====
+    function createAvatarParticle() {
+        const particlesContainer = document.querySelector('.avatar-particles');
+        if (!particlesContainer) return;
+        
+        const particle = document.createElement('div');
+        particle.className = 'avatar-particle';
+        
+        // Random position around the circle
+        const angle = Math.random() * Math.PI * 2;
+        const radius = 140; // Half of avatar-particles width
+        const x = Math.cos(angle) * radius;
+        const y = Math.sin(angle) * radius;
+        
+        particle.style.left = `calc(50% + ${x}px)`;
+        particle.style.top = `calc(50% + ${y}px)`;
+        
+        // Random color (cyan or purple)
+        const colors = ['var(--galaxy-cyan)', 'var(--glow-purple)'];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        particle.style.background = color;
+        particle.style.boxShadow = `0 0 10px ${color}, 0 0 20px ${color}`;
+        
+        particlesContainer.appendChild(particle);
+        
+        setTimeout(() => {
+            particle.remove();
+        }, 4000);
+    }
+
+    // Create particles around avatar
+    setInterval(createAvatarParticle, 1500);
+    
+    // Create initial particles
     for (let i = 0; i < 3; i++) {
-        setTimeout(createShootingStar, i * 1500);
+        setTimeout(createAvatarParticle, i * 500);
     }
 
     // ===== NAVIGATION =====
