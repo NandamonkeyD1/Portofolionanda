@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         const whatsappMessage = `Hello! I'm ${name}%0A%0AEmail: ${email}%0A%0AMessage:%0A${message}%0A%0AThank you!`;
-        const whatsappNumber = '6285741850067';
+        const whatsappNumber = '6285741859067';
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
         
         window.open(whatsappURL, '_blank');
@@ -360,3 +360,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('🚀 NASA-Inspired Portfolio Loaded Successfully!');
 });
+
