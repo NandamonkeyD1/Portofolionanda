@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                   `Terima kasih!`;
             
             // WhatsApp number (replace with your actual number)
-            const whatsappNumber = '6285741850067';
+            const whatsappNumber = '6285741859067';
             
             // Create WhatsApp URL
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
@@ -481,4 +481,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     `;
+
     document.head.appendChild(formStyle);
