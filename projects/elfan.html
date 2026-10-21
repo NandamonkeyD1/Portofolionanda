@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELFAN Command Engine — Case Study | Nanda Ari Wahyu Widagdo</title>
+  <meta name="description" content="Case study: ELFAN Command Engine by Nanda Ari Wahyu Widagdo. An IoT hardware automation architecture driven by ESP32, Raspberry Pi, and MQTT pub/sub protocol.">
+  <link rel="canonical" href="https://portofolionanda-mu.vercel.app/projects/elfan.html">
+  <meta name="author" content="Nanda Ari Wahyu Widagdo">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .case-hero {
+      padding-top: calc(var(--nav-height) + 3rem);
+      padding-bottom: 3rem;
+    }
+    .case-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--accent-lime);
+      margin-bottom: 2rem;
+      transition: transform var(--transition-fast);
+    }
+    .case-back-link:hover {
+      transform: translateX(-4px);
+    }
+    .case-detail-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3.5rem;
+      margin-top: 3rem;
+    }
+    .case-meta-sidebar {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2rem;
+      height: fit-content;
+    }
+    .case-meta-item {
+      margin-bottom: 1.5rem;
+    }
+    .case-meta-item:last-child {
+      margin-bottom: 0;
+    }
+    .case-meta-label {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.35rem;
+    }
+    .case-meta-val {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .case-content-body section {
+      margin-bottom: 3.5rem;
+    }
+    .case-content-body h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .case-content-body h2 .sec-id {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--accent-cobalt);
+    }
+    .case-img-showcase {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      margin-block: 1.5rem;
+      background: #0b0f19;
+    }
+    .feature-comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .status-box {
+      border-radius: 8px;
+      padding: 1.25rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+    }
+    .status-box.implemented {
+      border-color: rgba(36, 87, 255, 0.4);
+      background: rgba(36, 87, 255, 0.05);
+    }
+    .status-box.experimental {
+      border-color: rgba(223, 255, 79, 0.3);
+      background: rgba(223, 255, 79, 0.04);
+    }
+    .status-box h4 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .case-nav-pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 3rem;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 4rem;
+    }
+    @media (max-width: 900px) {
+      .case-detail-grid {
+        grid-template-columns: 1fr;
+      }
+      .feature-comparison-grid {
+        grid-template-columns: 1fr;
+      }
+      .case-meta-sidebar {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Ambient Background -->
+  <div class="bg-ambient"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Minimal Nav -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-brand">NANDA<span class="dot">.</span></a>
+      <div class="nav-cta-wrapper">
+        <a href="../index.html#work" class="btn btn-secondary btn-sm">← Back to Portfolio</a>
+        <a href="../index.html#contact" class="btn btn-lime btn-sm">Let's Talk ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="case-hero">
+      <div class="container">
+        <a href="../index.html#work" class="case-back-link">← 02 // SELECTED WORKS</a>
+        <div class="section-badge lime">Case Study 03 // IoT & Automation</div>
+        <h1 class="section-title-large" style="margin-bottom: 0.75rem;">ELFAN Command Engine</h1>
+        <p class="section-lead">A hardware automation architecture driven by microcontrollers (ESP32 / Raspberry Pi) with an MQTT pub/sub pipeline for sensor telemetry and precision relay control.</p>
+
+        <div class="case-img-showcase" style="margin-top: 2.5rem;">
+          <img src="../elfan-architecture.svg" alt="ELFAN Command Engine System Architecture" style="width: 100%; max-height: 520px; object-fit: contain; padding: 1rem;">
+        </div>
+
+        <div class="case-detail-grid">
+          <div class="case-content-body">
+            
+            <!-- 1. Overview -->
+            <section id="overview">
+              <h2><span class="sec-id">01 /</span> Project Overview</h2>
+              <p>ELFAN Command Engine is an autonomous hardware-to-cloud bridge engineered to connect edge microcontroller nodes with web-based operational dashboards. Leveraging the ultra-lightweight MQTT publish/subscribe protocol, it manages sensor telemetry streams and executes relay triggers with minimal network overhead.</p>
+            </section>
+
+            <!-- 2. Problem & Motivation -->
+            <section id="problem">
+              <h2><span class="sec-id">02 /</span> Problem & Motivation</h2>
+              <p>Conventional consumer smart device setups frequently experience significant latency due to slow HTTP polling, forced dependence on third-party proprietary clouds, and a complete loss of local control whenever public internet connectivity suffers an outage.</p>
+            </section>
+
+            <!-- 3. My Role & Contributions -->
+            <section id="role">
+              <h2><span class="sec-id">03 /</span> My Role & Contributions</h2>
+              <p>As Embedded & Creative Technology Developer on this project:</p>
+              <ul style="margin-left: 1.5rem; margin-top: 0.75rem; color: var(--text-secondary); line-height: 1.8;">
+                <li>Wrote low-level C++ firmware on the ESP32 handling WiFi reconnection state machines, JSON payload parsing, and hardware failsafe timeouts.</li>
+                <li>Configured a local Mosquitto MQTT broker and custom Node.js system daemon on a Raspberry Pi host.</li>
+                <li>Engineered a responsive telemetry web dashboard with WebSockets achieving sub-40ms visual feedback.</li>
+                <li>Conducted load tolerance and electrical isolation tests on 4-channel optocoupled relay arrays.</li>
+              </ul>
+            </section>
+
+            <!-- 4. Technical Stack -->
+            <section id="tech-stack">
+              <h2><span class="sec-id">04 /</span> Technical Stack</h2>
+              <div class="project-tech-tags" style="margin-top: 1rem;">
+                <span class="tech-tag-chip">ESP32 (Dual Core 240MHz)</span>
+                <span class="tech-tag-chip">Raspberry Pi (Linux Host)</span>
+                <span class="tech-tag-chip">MQTT Protocol (Pub/Sub)</span>
+                <span class="tech-tag-chip">C++ (Arduino Framework)</span>
+                <span class="tech-tag-chip">Node.js Gateway</span>
+                <span class="tech-tag-chip">WebSockets (Socket.io)</span>
+                <span class="tech-tag-chip">Optocoupled Relays</span>
+              </div>
+            </section>
+
+            <!-- 5. Architecture & Design Decisions -->
+            <section id="architecture">
+              <h2><span class="sec-id">05 /</span> Design & Architecture Decisions</h2>
+              <p>The system is architected in three decoupled layers:</p>
+              <ol style="margin-left: 1.5rem; margin-top: 0.75rem; color: var(--text-secondary); line-height: 1.8;">
+                <li><strong>Edge Hardware Layer:</strong> ESP32 nodes read analog temperature/voltage sensors and actuate physical relay switches via GPIO pins.</li>
+                <li><strong>Gateway Host Layer:</strong> The Raspberry Pi runs a dedicated MQTT broker locally, ensuring scheduled automation rules remain fully operational even during complete WAN disconnection.</li>
+                <li><strong>Presentation Layer:</strong> A web interface receives real-time telemetry streams via push WebSockets rather than polling.</li>
+              </ol>
+            </section>
+
+            <!-- 6. Distinction: Implemented vs Experimental -->
+            <section id="features-status">
+              <h2><span class="sec-id">06 /</span> Implemented vs Experimental Lab Features</h2>
+              <p>To uphold technical integrity, the status of verified operational capabilities is distinguished from ongoing laboratory exploration below:</p>
+              
+              <div class="feature-comparison-grid">
+                <div class="status-box implemented">
+                  <h4 style="color: var(--accent-cobalt);">● Implemented & Verified</h4>
+                  <ul style="font-size: 0.9rem; line-height: 1.6; margin-left: 1.25rem;">
+                    <li>ESP32 firmware with automatic local WiFi reconnect routines.</li>
+                    <li>MQTT Pub/Sub commands for 4-channel GPIO relay actuation with state verification.</li>
+                    <li>Web-based telemetry monitoring with live sensor feeds.</li>
+                    <li>Local historical activity and event logging on Raspberry Pi.</li>
+                  </ul>
+                </div>
+
+                <div class="status-box experimental">
+                  <h4 style="color: var(--accent-lime);">○ In Progress / Research Lab</h4>
+                  <ul style="font-size: 0.9rem; line-height: 1.6; margin-left: 1.25rem;">
+                    <li>Multi-node mesh synchronization (ESP-NOW to MQTT Gateway).</li>
+                    <li>Edge-based power consumption anomaly detection algorithms.</li>
+                    <li>End-to-end TLS payload encryption over public domains.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <!-- 7. Challenges & Lessons -->
+            <section id="challenges">
+              <h2><span class="sec-id">07 /</span> Challenges & Lessons Learned</h2>
+              <p>The foremost hurdle was electromagnetic interference (EMI) generated by mechanical relay coils, which initially triggered spurious resets on the microcontroller. We resolved this by physically isolating logic power rails from coil power rails using optocouplers and flyback suppression diodes.</p>
+            </section>
+
+            <!-- 8. Outcome & Status -->
+            <section id="outcome">
+              <h2><span class="sec-id">08 /</span> Outcome & Project Status</h2>
+              <p>The core command prototype demonstrated dependable uptime throughout extended laboratory stress testing, serving as a core foundation for my research in creative technology and cyber-physical systems.</p>
+            </section>
+
+            <!-- 9. Links & Artifacts -->
+            <section id="links">
+              <h2><span class="sec-id">09 /</span> Links & Hardware Schematics</h2>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                <a href="../elfan-architecture.svg" target="_blank" class="btn btn-secondary btn-sm">View Full Architecture Diagram (SVG) ↗</a>
+                <a href="../index.html#contact" class="btn btn-primary btn-sm">Inquire on IoT Collaboration ↗</a>
+              </div>
+            </section>
+
+          </div>
+
+          <!-- Sidebar Meta -->
+          <aside class="case-meta-sidebar">
+            <div class="case-meta-item">
+              <div class="case-meta-label">Category</div>
+              <div class="case-meta-val">IoT / Hardware Automation</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Role</div>
+              <div class="case-meta-val">Creative Tech & IoT Engineer</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Protocol & Runtime</div>
+              <div class="case-meta-val">MQTT, WebSockets, C++, Node.js</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Hardware Controller</div>
+              <div class="case-meta-val">ESP32 + Raspberry Pi Hub</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Operational Status</div>
+              <div class="case-meta-val" style="color: var(--accent-lime);">Core Verified / Lab Active</div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- 10. Navigation to Next Project -->
+        <div class="case-nav-pagination">
+          <a href="pos.html" class="btn btn-secondary">← Prev: Restaurant POS</a>
+          <a href="ecommerce.html" class="btn btn-lime">Next: E-Commerce Platform ↗</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom-row">
+      <p>&copy; 2026 Nanda Ari Wahyu Widagdo. All rights reserved.</p>
+      <span class="footer-closing-phrase">Designed with curiosity. Built with purpose.</span>
+    </div>
+  </footer>
+</body>
+</html>

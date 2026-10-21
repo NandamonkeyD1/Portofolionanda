@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant POS System — Case Study | Nanda Ari Wahyu Widagdo</title>
+  <meta name="description" content="Case study: Restaurant POS System for Soto Restaurant by Nanda Ari Wahyu Widagdo. Fast table ordering, menu inventory tracking, and daily sales reports.">
+  <link rel="canonical" href="https://portofolionanda-mu.vercel.app/projects/pos.html">
+  <meta name="author" content="Nanda Ari Wahyu Widagdo">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .case-hero {
+      padding-top: calc(var(--nav-height) + 3rem);
+      padding-bottom: 3rem;
+    }
+    .case-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--accent-lime);
+      margin-bottom: 2rem;
+      transition: transform var(--transition-fast);
+    }
+    .case-back-link:hover {
+      transform: translateX(-4px);
+    }
+    .case-detail-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3.5rem;
+      margin-top: 3rem;
+    }
+    .case-meta-sidebar {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2rem;
+      height: fit-content;
+    }
+    .case-meta-item {
+      margin-bottom: 1.5rem;
+    }
+    .case-meta-item:last-child {
+      margin-bottom: 0;
+    }
+    .case-meta-label {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.35rem;
+    }
+    .case-meta-val {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .case-content-body section {
+      margin-bottom: 3.5rem;
+    }
+    .case-content-body h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .case-content-body h2 .sec-id {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--accent-cobalt);
+    }
+    .case-img-showcase {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      margin-block: 1.5rem;
+    }
+    .case-nav-pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 3rem;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 4rem;
+    }
+    @media (max-width: 900px) {
+      .case-detail-grid {
+        grid-template-columns: 1fr;
+      }
+      .case-meta-sidebar {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Ambient Background -->
+  <div class="bg-ambient"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Minimal Nav -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-brand">NANDA<span class="dot">.</span></a>
+      <div class="nav-cta-wrapper">
+        <a href="../index.html#work" class="btn btn-secondary btn-sm">← Back to Portfolio</a>
+        <a href="../index.html#contact" class="btn btn-lime btn-sm">Let's Talk ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="case-hero">
+      <div class="container">
+        <a href="../index.html#work" class="case-back-link">← 02 // SELECTED WORKS</a>
+        <div class="section-badge">Case Study 02 // Business Software</div>
+        <h1 class="section-title-large" style="margin-bottom: 0.75rem;">Point of Sale for Restaurant</h1>
+        <p class="section-lead">A dedicated point of sale and transaction management application tailored for culinary operations (Soto Restaurant), featuring rapid checkout and automated sales reporting.</p>
+
+        <div class="case-img-showcase" style="margin-top: 2.5rem;">
+          <img src="../pos.jpg" alt="Restaurant POS Interface Preview" style="width: 100%; max-height: 540px; object-fit: cover;">
+        </div>
+
+        <div class="case-detail-grid">
+          <div class="case-content-body">
+            
+            <!-- 1. Overview -->
+            <section id="overview">
+              <h2><span class="sec-id">01 /</span> Project Overview</h2>
+              <p>Restaurant POS is a responsive desktop and web checkout system built to streamline restaurant transactions, table-side order processing, receipt generation, live menu item availability, and end-of-day managerial audits in a culinary environment.</p>
+            </section>
+
+            <!-- 2. Problem & Motivation -->
+            <section id="problem">
+              <h2><span class="sec-id">02 /</span> Problem & Motivation</h2>
+              <p>Rush-hour lunch traffic frequently produced lengthy customer queues caused by manual handwritten order slips. Discrepancies between kitchen dish production and physical cash drawer balances made automated, traceable digital receipts essential.</p>
+            </section>
+
+            <!-- 3. My Role & Contributions -->
+            <section id="role">
+              <h2><span class="sec-id">03 /</span> My Role & Contributions</h2>
+              <p>As the Software Developer for this project:</p>
+              <ul style="margin-left: 1.5rem; margin-top: 0.75rem; color: var(--text-secondary); line-height: 1.8;">
+                <li>Analyzed dining service workflows directly on-site (waitstaff order intake to kitchen and cashier counter).</li>
+                <li>Engineered high-velocity client-side checkout interactions supporting touchscreens and keyboard shortcuts.</li>
+                <li>Developed ingredient inventory tracking and real-time menu availability toggles (In Stock / Sold Out).</li>
+                <li>Constructed automated query algorithms in MySQL for daily, weekly, and monthly revenue reconciliation.</li>
+              </ul>
+            </section>
+
+            <!-- 4. Technical Stack -->
+            <section id="tech-stack">
+              <h2><span class="sec-id">04 /</span> Technical Stack</h2>
+              <div class="project-tech-tags" style="margin-top: 1rem;">
+                <span class="tech-tag-chip">PHP</span>
+                <span class="tech-tag-chip">MySQL</span>
+                <span class="tech-tag-chip">JavaScript (DOM & POS Logic)</span>
+                <span class="tech-tag-chip">Bootstrap UI</span>
+                <span class="tech-tag-chip">Thermal Printer Integration (ESC/POS)</span>
+              </div>
+            </section>
+
+            <!-- 5. Architecture & Design Decisions -->
+            <section id="architecture">
+              <h2><span class="sec-id">05 /</span> Design & Architecture Decisions</h2>
+              <p>The cashier layout was constructed with large touch-friendly targets to facilitate fast inputs on commercial POS terminals. Transactions utilize database-level atomic operations in MySQL, preventing half-written invoices if power or printer connection is interrupted.</p>
+            </section>
+
+            <!-- 6. Implementation Evidence -->
+            <section id="evidence">
+              <h2><span class="sec-id">06 /</span> Screenshots & Implementation Evidence</h2>
+              <p>The interface supports dynamic item quantity adjustments, instant cash change calculation, split-billing, and immediate thermal receipt print triggers.</p>
+              <div class="case-img-showcase">
+                <img src="../pos.jpg" alt="POS Transaction Interface Screenshot" style="width: 100%;">
+              </div>
+            </section>
+
+            <!-- 7. Challenges & Lessons -->
+            <section id="challenges">
+              <h2><span class="sec-id">07 /</span> Challenges & Lessons Learned</h2>
+              <p>Latency was the critical performance bottleneck: staff could not afford page reloads during checkout. I engineered the transaction cart completely in client-side JavaScript, enabling instant item additions and zero-latency price calculations.</p>
+            </section>
+
+            <!-- 8. Outcome & Status -->
+            <section id="outcome">
+              <h2><span class="sec-id">08 /</span> Outcome & Project Status</h2>
+              <p>The system helped cashiers cut customer checkout duration by 50%, eliminated handwritten calculation errors, and provided transparent daily analytics for the business owners.</p>
+            </section>
+
+            <!-- 9. Links & Artifacts -->
+            <section id="links">
+              <h2><span class="sec-id">09 /</span> Links & Verified Artifacts</h2>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                <a href="../CV Webdeveloper And Digital Marketing.pdf" target="_blank" class="btn btn-secondary btn-sm">Verified in CV Portfolio ↗</a>
+                <a href="../index.html#contact" class="btn btn-primary btn-sm">Inquire for POS Development ↗</a>
+              </div>
+            </section>
+
+          </div>
+
+          <!-- Sidebar Meta -->
+          <aside class="case-meta-sidebar">
+            <div class="case-meta-item">
+              <div class="case-meta-label">Category</div>
+              <div class="case-meta-val">Business Software / POS</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Role</div>
+              <div class="case-meta-val">Software Developer</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Core Technologies</div>
+              <div class="case-meta-val">PHP, MySQL, JavaScript, Bootstrap</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Target Sector</div>
+              <div class="case-meta-val">Food & Beverage (Soto Restaurant)</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Current Status</div>
+              <div class="case-meta-val" style="color: var(--accent-lime);">Verified & Completed</div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- 10. Navigation to Next Project -->
+        <div class="case-nav-pagination">
+          <a href="eraport.html" class="btn btn-secondary">← Prev: E-Raport</a>
+          <a href="elfan.html" class="btn btn-lime">Next: ELFAN Command Engine ↗</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom-row">
+      <p>&copy; 2026 Nanda Ari Wahyu Widagdo. All rights reserved.</p>
+      <span class="footer-closing-phrase">Designed with curiosity. Built with purpose.</span>
+    </div>
+  </footer>
+</body>
+</html>

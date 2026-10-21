@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Admin Dashboard & UI/UX — Case Study | Nanda Ari Wahyu Widagdo</title>
+  <meta name="description" content="Case study: Enterprise Admin Dashboard & UI/UX Design by Nanda Ari Wahyu Widagdo. A high-density data analytics interface designed in Figma with WCAG 2.1 compliance.">
+  <link rel="canonical" href="https://portofolionanda-mu.vercel.app/projects/dashboard.html">
+  <meta name="author" content="Nanda Ari Wahyu Widagdo">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .case-hero {
+      padding-top: calc(var(--nav-height) + 3rem);
+      padding-bottom: 3rem;
+    }
+    .case-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--accent-lime);
+      margin-bottom: 2rem;
+      transition: transform var(--transition-fast);
+    }
+    .case-back-link:hover {
+      transform: translateX(-4px);
+    }
+    .case-detail-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3.5rem;
+      margin-top: 3rem;
+    }
+    .case-meta-sidebar {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2rem;
+      height: fit-content;
+    }
+    .case-meta-item {
+      margin-bottom: 1.5rem;
+    }
+    .case-meta-item:last-child {
+      margin-bottom: 0;
+    }
+    .case-meta-label {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.35rem;
+    }
+    .case-meta-val {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .case-content-body section {
+      margin-bottom: 3.5rem;
+    }
+    .case-content-body h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .case-content-body h2 .sec-id {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--accent-cobalt);
+    }
+    .case-img-showcase {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      margin-block: 1.5rem;
+    }
+    .case-nav-pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 3rem;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 4rem;
+    }
+    @media (max-width: 900px) {
+      .case-detail-grid {
+        grid-template-columns: 1fr;
+      }
+      .case-meta-sidebar {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Ambient Background -->
+  <div class="bg-ambient"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Minimal Nav -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-brand">NANDA<span class="dot">.</span></a>
+      <div class="nav-cta-wrapper">
+        <a href="../index.html#work" class="btn btn-secondary btn-sm">← Back to Portfolio</a>
+        <a href="../index.html#contact" class="btn btn-lime btn-sm">Let's Talk ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="case-hero">
+      <div class="container">
+        <a href="../index.html#work" class="case-back-link">← 02 // SELECTED WORKS</a>
+        <div class="section-badge">Case Study 05 // UI/UX & Product Design</div>
+        <h1 class="section-title-large" style="margin-bottom: 0.75rem;">Enterprise Dashboard & Data Analytics</h1>
+        <p class="section-lead">A multi-tier data management interface designed in Figma with verified visual hierarchies, ergonomic business metrics, and high administrative efficiency.</p>
+
+        <div class="case-img-showcase" style="margin-top: 2.5rem;">
+          <img src="../dashboardadmin.jpg" alt="Admin Dashboard Interface Preview" style="width: 100%; max-height: 540px; object-fit: cover;">
+        </div>
+
+        <div class="case-detail-grid">
+          <div class="case-content-body">
+            
+            <!-- 1. Overview -->
+            <section id="overview">
+              <h2><span class="sec-id">01 /</span> Project Overview</h2>
+              <p>This UI/UX design initiative focused on synthesizing complex operational streams—transaction volumes, conversion cohorts, and infrastructure health logs—into an uncluttered control interface. Core design criteria prioritized dark-theme ocular comfort, high information density without visual crowding, and standardized component modularity.</p>
+            </section>
+
+            <!-- 2. Problem & Motivation -->
+            <section id="problem">
+              <h2><span class="sec-id">02 /</span> Problem & Motivation</h2>
+              <p>Legacy analytical consoles often suffer from cognitive overload, forcing operators to parse unformatted numerical data tables. The objective was to decrease mean time-to-insight (MTTI) through contextual spatial clustering and intentional chromatic alerts.</p>
+            </section>
+
+            <!-- 3. My Role & Contributions -->
+            <section id="role">
+              <h2><span class="sec-id">03 /</span> My Role & Contributions</h2>
+              <p>As the UI/UX Designer & Product Prototyper:</p>
+              <ul style="margin-left: 1.5rem; margin-top: 0.75rem; color: var(--text-secondary); line-height: 1.8;">
+                <li>Investigated operational behavioral patterns among data administrators during high-volume work shifts.</li>
+                <li>Created a full-scale Design System in Figma (color tokens, auto-layout typography scale, icon library, and reusable component variants).</li>
+                <li>Engineered modular KPI summary cards (revenue velocity, retention percentage, server log status).</li>
+                <li>Built interactive high-fidelity prototypes to test navigation ergonomics and multi-filter criteria.</li>
+              </ul>
+            </section>
+
+            <!-- 4. Technical Stack -->
+            <section id="tech-stack">
+              <h2><span class="sec-id">04 /</span> Technical Stack</h2>
+              <div class="project-tech-tags" style="margin-top: 1rem;">
+                <span class="tech-tag-chip">Figma</span>
+                <span class="tech-tag-chip">Component Variants & Auto-Layout</span>
+                <span class="tech-tag-chip">Interactive Prototyping</span>
+                <span class="tech-tag-chip">Information Architecture</span>
+                <span class="tech-tag-chip">WCAG 2.1 Contrast Standards</span>
+              </div>
+            </section>
+
+            <!-- 5. Architecture & Design Decisions -->
+            <section id="architecture">
+              <h2><span class="sec-id">05 /</span> Design & Architecture Decisions</h2>
+              <p>Built atop a responsive 12-column layout grid featuring collapsible navigation. Data charts employ functional chromatic semantics: cobalt blue designates primary volumes, purple indicates projection curves, while neon lime and warning vermilion highlight normal versus critical alert states.</p>
+            </section>
+
+            <!-- 6. Implementation Evidence -->
+            <section id="evidence">
+              <h2><span class="sec-id">06 /</span> Screenshots & Implementation Evidence</h2>
+              <p>Preview of the analytical card modularity, filter breadcrumbs, and data density balance.</p>
+              <div class="case-img-showcase">
+                <img src="../dashboardadmin.jpg" alt="Admin Dashboard Design Screenshot" style="width: 100%;">
+              </div>
+            </section>
+
+            <!-- 7. Challenges & Lessons -->
+            <section id="challenges">
+              <h2><span class="sec-id">07 /</span> Challenges & Lessons Learned</h2>
+              <p>The primary challenge was balancing maximum information density with visual whitespace to prevent eye strain during long operational shifts. We resolved this through restrained 1px surface borders (12% opacity) and geometric sans-serif typefaces with generous character spacing.</p>
+            </section>
+
+            <!-- 8. Outcome & Status -->
+            <section id="outcome">
+              <h2><span class="sec-id">08 /</span> Outcome & Project Status</h2>
+              <p>The completed Figma prototype passed usability verification and was adopted as the foundational interface design benchmark for internal software products at Solvia Nova.</p>
+            </section>
+
+            <!-- 9. Links & Artifacts -->
+            <section id="links">
+              <h2><span class="sec-id">09 /</span> Links & Verified Artifacts</h2>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                <a href="../CV Webdeveloper And Digital Marketing.pdf" target="_blank" class="btn btn-secondary btn-sm">Verified in Portfolio Records ↗</a>
+                <a href="../index.html#contact" class="btn btn-primary btn-sm">Discuss UI/UX Collaboration ↗</a>
+              </div>
+            </section>
+
+          </div>
+
+          <!-- Sidebar Meta -->
+          <aside class="case-meta-sidebar">
+            <div class="case-meta-item">
+              <div class="case-meta-label">Category</div>
+              <div class="case-meta-val">UI/UX Design / Product Interface</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Role</div>
+              <div class="case-meta-val">UI/UX Designer</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Core Tools</div>
+              <div class="case-meta-val">Figma, Design Systems, Auto-Layout</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Deliverables</div>
+              <div class="case-meta-val">Figma Prototype & Design Specs</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Current Status</div>
+              <div class="case-meta-val" style="color: var(--accent-lime);">Production Design Ready</div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- 10. Navigation to Next Project -->
+        <div class="case-nav-pagination">
+          <a href="ecommerce.html" class="btn btn-secondary">← Prev: E-Commerce Platform</a>
+          <a href="eraport.html" class="btn btn-lime">Next: E-Raport System ↗</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom-row">
+      <p>&copy; 2026 Nanda Ari Wahyu Widagdo. All rights reserved.</p>
+      <span class="footer-closing-phrase">Designed with curiosity. Built with purpose.</span>
+    </div>
+  </footer>
+</body>
+</html>

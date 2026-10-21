@@ -1,364 +1,432 @@
-// ===== NASA-INSPIRED PORTFOLIO JAVASCRIPT - REFINED =====
+/**
+ * NANDA ARI WAHYU WIDAGDO — BOLD DIGITAL IDENTITY PORTFOLIO
+ * High-performance vanilla JavaScript interactivity (Full English Edition)
+ */
 
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // ===== TYPING ANIMATION - REFINED =====
-    const typingRole = document.querySelector('.typing-role');
-    const roles = [
-        'Software Engineer',
-        'Web Developer',
-        'UI/UX Designer',
-        'Digital Marketing Strategist'
-    ];
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
+document.addEventListener('DOMContentLoaded', () => {
+  'use strict';
 
-    function typeWriter() {
-        const currentRole = roles[roleIndex];
-        
-        if (isDeleting) {
-            typingRole.textContent = currentRole.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typingRole.textContent = currentRole.substring(0, charIndex + 1);
-            charIndex++;
+  // =========================================================================
+  // 1. DYNAMIC DATA FOR IN-PAGE CASE STUDY MODAL SYSTEM (FULL ENGLISH)
+  // =========================================================================
+  const caseStudiesData = {
+    eraport: {
+      id: 'eraport',
+      title: 'E-Raport Management System',
+      category: 'Web Application / Education Technology',
+      badge: 'Case Study 01 // Education Technology',
+      image: './raport.jpg',
+      lead: 'An integrated academic governance and digital grading platform engineered for transparent evaluation between schools, educators, students, and parents.',
+      tags: ['PHP', 'Laravel', 'MySQL', 'Blade', 'Bootstrap', 'RBAC Security', 'Registered Copyright (PDKI 2025)'],
+      sections: [
+        {
+          num: '01',
+          title: 'Project Overview',
+          content: 'E-Raport Management System is an enterprise educational web application engineered to modernize academic evaluation at vocational high schools (SMK). It unifies subject instructors, homeroom advisors, curriculum directors, and students into a cohesive ecosystem.'
+        },
+        {
+          num: '02',
+          title: 'Problem & Motivation',
+          content: 'Manual score calculations via decentralized spreadsheets often caused weighted formula discrepancies, delayed semester card generation, and lacked real-time visibility for parents. This system automates weighted score calculations instantly with zero formula error.'
+        },
+        {
+          num: '03',
+          title: 'Key Contributions',
+          content: 'Architected the normalized relational MySQL database schema, implemented strict Role-Based Access Control (RBAC) across 4 access tiers (Admin, Teachers, Homeroom Advisors, Students), and built automated standardized PDF report card generation.'
+        },
+        {
+          num: '04',
+          title: 'Outcome & Current Status',
+          content: 'Drastically compressed the grade aggregation cycle from weeks down to hours following teacher submissions. Status: Fully verified and deployed in academic operations.'
         }
-
-        let typeSpeed = isDeleting ? 40 : 90;
-
-        if (!isDeleting && charIndex === currentRole.length) {
-            typeSpeed = 2500;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            typeSpeed = 600;
+      ],
+      linkStandalone: './projects/eraport.html',
+      nextId: 'pos'
+    },
+    pos: {
+      id: 'pos',
+      title: 'Point of Sale for Restaurant',
+      category: 'Business Software / Commerce',
+      badge: 'Case Study 02 // Business Software',
+      image: './pos.jpg',
+      lead: 'A dedicated point of sale and transaction management application tailored for culinary operations (Soto Restaurant), featuring rapid checkout and automated sales reporting.',
+      tags: ['PHP', 'MySQL', 'JavaScript (ES6)', 'Bootstrap', 'Thermal ESC/POS'],
+      sections: [
+        {
+          num: '01',
+          title: 'Project Overview',
+          content: 'A responsive desktop and web POS system designed to streamline the complete dining lifecycle: table ordering, receipt printing, kitchen stock availability, and daily cashier reconciliations.'
+        },
+        {
+          num: '02',
+          title: 'Problem & Motivation',
+          content: 'Peak rush-hour dining frequently caused long queues due to paper-based order tracking. Discrepancies between kitchen dish dispatches and physical cash drawer counts were eliminated through an auditable digital register.'
+        },
+        {
+          num: '03',
+          title: 'Key Contributions',
+          content: 'Engineered zero-reload client-side transaction logic (sub-millisecond UI response), dynamic item addition, instant change calculation, table split-billing, and ESC/POS thermal printer integration.'
+        },
+        {
+          num: '04',
+          title: 'Outcome & Current Status',
+          content: 'Cut customer checkout durations by up to 50% and eliminated human calculation errors on invoices. Status: Verified and completed.'
         }
-
-        setTimeout(typeWriter, typeSpeed);
+      ],
+      linkStandalone: './projects/pos.html',
+      nextId: 'elfan'
+    },
+    elfan: {
+      id: 'elfan',
+      title: 'ELFAN Command Engine',
+      category: 'IoT / Automation & Embedded',
+      badge: 'Case Study 03 // IoT & Automation',
+      image: './elfan-architecture.svg',
+      lead: 'A hardware automation architecture driven by microcontrollers (ESP32 / Raspberry Pi) with an MQTT pub/sub pipeline for sensor telemetry and precision relay control.',
+      tags: ['ESP32', 'Raspberry Pi', 'MQTT Protocol', 'C++', 'Node.js', 'WebSockets'],
+      sections: [
+        {
+          num: '01',
+          title: 'Project Overview',
+          content: 'An independent hardware-to-cloud bridge connecting edge microcontroller nodes with live web telemetry dashboards using the ultra-lightweight MQTT publish/subscribe protocol.'
+        },
+        {
+          num: '02',
+          title: 'Architecture & Verified Layers',
+          content: 'ESP32 microcontrollers actuate 4-channel optocoupled relays and read environmental analog sensors. A local Raspberry Pi host runs the Mosquitto broker, ensuring LAN automations continue running during internet outages.'
+        },
+        {
+          num: '03',
+          title: 'Implemented vs Experimental Distinction',
+          content: 'VERIFIED IMPLEMENTATION: ESP32 C++ firmware with auto-reconnect, MQTT Pub/Sub GPIO switching, and real-time WebSocket dashboard (<35ms latency). EXPERIMENTAL LAB: Multi-node ESP-NOW mesh relaying and edge anomaly detection.'
+        },
+        {
+          num: '04',
+          title: 'Outcome & Current Status',
+          content: 'Core command engine prototype validated through continuous stress-testing in lab environments. Status: Core Verified / Lab Research Active.'
+        }
+      ],
+      linkStandalone: './projects/elfan.html',
+      nextId: 'ecommerce'
+    },
+    ecommerce: {
+      id: 'ecommerce',
+      title: 'E-Commerce Platform',
+      category: 'Web Development / Digital Product',
+      badge: 'Case Study 04 // Digital Product',
+      image: './ecommerce.jpg',
+      lead: 'A modular digital commerce storefront with real-time product catalogs, shopping cart state management, checkout validation, and back-office inventory controls.',
+      tags: ['Laravel', 'Vue.js', 'MySQL', 'RESTful APIs', 'Tailwind CSS'],
+      sections: [
+        {
+          num: '01',
+          title: 'Project Overview',
+          content: 'An integrated storefront platform delivering an intuitive, responsive purchasing journey for customers, paired with a comprehensive administrative back-office for inventory and order fulfillment.'
+        },
+        {
+          num: '02',
+          title: 'Problem & Motivation',
+          content: 'Replaces unstructured manual sales channels (chat orders) that suffer from missed delivery records, lost customer details, and accidental overselling during simultaneous order surges.'
+        },
+        {
+          num: '03',
+          title: 'Key Contributions',
+          content: 'Designed multi-variant database models, asynchronous catalog filtering, transactional stock locking during checkout validation, and an administrative order management CMS.'
+        },
+        {
+          num: '04',
+          title: 'Outcome & Current Status',
+          content: 'Produced a resilient, end-to-end purchasing workflow ready for live payment gateway integrations (Midtrans/Xendit). Status: Production Prototype Ready.'
+        }
+      ],
+      linkStandalone: './projects/ecommerce.html',
+      nextId: 'dashboard'
+    },
+    dashboard: {
+      id: 'dashboard',
+      title: 'Enterprise Dashboard & Data Analytics',
+      category: 'UI/UX & Product Design',
+      badge: 'Case Study 05 // UI/UX Design',
+      image: './dashboardadmin.jpg',
+      lead: 'A multi-tier data management interface designed in Figma with verified visual hierarchies, ergonomic business metrics, and high administrative efficiency.',
+      tags: ['Figma', 'Design Systems', 'Auto-Layout', 'Information Architecture', 'WCAG 2.1'],
+      sections: [
+        {
+          num: '01',
+          title: 'Project Overview',
+          content: 'An integrated analytical control panel engineered for at-a-glance monitoring of transactions, user activity metrics, and server operational logs, prioritizing dark-theme ocular ergonomics.'
+        },
+        {
+          num: '02',
+          title: 'Problem & Motivation',
+          content: 'Eliminates cognitive fatigue (data overload) experienced by operators through modular spatial grouping and functional color coding for critical operational thresholds.'
+        },
+        {
+          num: '03',
+          title: 'Key Contributions',
+          content: 'Engineered an end-to-end design system in Figma (semantic color tokens, auto-layout typography scale, reusable variants), modular KPI widgets, and high-fidelity interactive user flows.'
+        },
+        {
+          num: '04',
+          title: 'Outcome & Current Status',
+          content: 'Adopted as the core interface design benchmark across internal software initiatives at Solvia Nova. Status: Production Design Ready.'
+        }
+      ],
+      linkStandalone: './projects/dashboard.html',
+      nextId: 'eraport'
     }
+  };
 
-    setTimeout(typeWriter, 1800);
+  // =========================================================================
+  // 2. STICKY NAVIGATION & ACTIVE SCROLL OBSERVER
+  // =========================================================================
+  const siteNav = document.querySelector('.site-nav');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
+  const mobileToggle = document.querySelector('.mobile-nav-toggle');
+  const navMenu = document.querySelector('.nav-links');
 
-    // ===== METEOR SHOWER - OPTIMIZED =====
-    function createMeteor() {
-        const meteorField = document.querySelector('.meteor-field');
-        if (!meteorField) return;
-        
-        const meteor = document.createElement('div');
-        meteor.className = 'meteor';
-        meteor.style.left = Math.random() * 100 + '%';
-        meteor.style.animationDuration = (Math.random() * 2 + 3) + 's';
-        meteor.style.animationDelay = Math.random() * 3 + 's';
-        
-        meteorField.appendChild(meteor);
-        
-        setTimeout(() => {
-            meteor.remove();
-        }, 6000);
+  // Handle nav background on scroll
+  function handleNavScroll() {
+    if (window.scrollY > 40) {
+      siteNav?.classList.add('scrolled');
+    } else {
+      siteNav?.classList.remove('scrolled');
     }
+  }
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
+  handleNavScroll();
 
-    // OPTIMIZED: Reduced frequency from 4s to 8s
-    setInterval(createMeteor, 8000);
-
-    // ===== SHOOTING STARS (Background) - OPTIMIZED =====
-    function createShootingStar() {
-        const shootingStars = document.querySelector('.shooting-stars');
-        if (!shootingStars) return;
-        
-        const star = document.createElement('div');
-        star.className = 'shooting-star';
-        
-        // Random starting position
-        star.style.top = Math.random() * 50 + '%';
-        star.style.left = Math.random() * 100 + '%';
-        
-        // Random animation duration
-        star.style.animationDuration = (Math.random() * 3 + 2) + 's';
-        
-        shootingStars.appendChild(star);
-        
-        setTimeout(() => {
-            star.remove();
-        }, 5000);
-    }
-
-    // OPTIMIZED: Reduced frequency from 4s to 10s
-    setInterval(createShootingStar, 10000);
-    
-    // Create initial shooting star (reduced from 3 to 1)
-    setTimeout(createShootingStar, 1000);
-
-    // ===== AVATAR PARTICLES =====
-    function createAvatarParticle() {
-        const particlesContainer = document.querySelector('.avatar-particles');
-        if (!particlesContainer) return;
-        
-        const particle = document.createElement('div');
-        particle.className = 'avatar-particle';
-        
-        // Random position around the circle
-        const angle = Math.random() * Math.PI * 2;
-        const radius = 140; // Half of avatar-particles width
-        const x = Math.cos(angle) * radius;
-        const y = Math.sin(angle) * radius;
-        
-        particle.style.left = `calc(50% + ${x}px)`;
-        particle.style.top = `calc(50% + ${y}px)`;
-        
-        // Random color (cyan or purple)
-        const colors = ['var(--galaxy-cyan)', 'var(--glow-purple)'];
-        const color = colors[Math.floor(Math.random() * colors.length)];
-        particle.style.background = color;
-        particle.style.boxShadow = `0 0 10px ${color}, 0 0 20px ${color}`;
-        
-        particlesContainer.appendChild(particle);
-        
-        setTimeout(() => {
-            particle.remove();
-        }, 4000);
-    }
-
-    // Create particles around avatar
-    setInterval(createAvatarParticle, 1500);
-    
-    // Create initial particles
-    for (let i = 0; i < 3; i++) {
-        setTimeout(createAvatarParticle, i * 500);
-    }
-
-    // ===== NAVIGATION =====
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    hamburger?.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
+  // Mobile menu toggle
+  if (mobileToggle && navMenu) {
+    mobileToggle.addEventListener('click', () => {
+      const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', !isExpanded);
+      navMenu.classList.toggle('active');
     });
 
+    // Close mobile menu on link click
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            hamburger?.classList.remove('active');
-            
-            navLinks.forEach(l => l.classList.remove('active'));
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Active section spy
+  const sectionObserverOptions = {
+    threshold: 0.3,
+    rootMargin: '-80px 0px -40% 0px'
+  };
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${id}`) {
             link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
         });
+      }
+    });
+  }, sectionObserverOptions);
+
+  sections.forEach(sec => sectionObserver.observe(sec));
+
+  // =========================================================================
+  // 3. CASE STUDY MODAL ENGINE
+  // =========================================================================
+  const modalBackdrop = document.getElementById('caseStudyModal');
+  const modalBody = document.getElementById('modalCaseStudyContent');
+  const modalCloseBtn = document.getElementById('closeCaseStudyModal');
+
+  function openCaseStudy(projectId) {
+    const data = caseStudiesData[projectId];
+    if (!data || !modalBody || !modalBackdrop) return;
+
+    let sectionsHtml = '';
+    data.sections.forEach(sec => {
+      sectionsHtml += `
+        <div class="case-study-section-block">
+          <h3><span class="section-num">${sec.num} /</span> ${sec.title}</h3>
+          <p>${sec.content}</p>
+        </div>
+      `;
     });
 
-    // ===== SCROLL ANIMATIONS - REFINED =====
-    const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -80px 0px'
-    };
+    let tagsHtml = data.tags.map(t => `<span class="tech-tag-chip">${t}</span>`).join(' ');
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
+    modalBody.innerHTML = `
+      <div class="section-badge lime">${data.badge}</div>
+      <h2 style="font-size: 2.2rem; margin-top: 0.5rem; margin-bottom: 0.8rem; letter-spacing: -0.02em;">${data.title}</h2>
+      <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.75rem;">${data.lead}</p>
+      
+      <div class="case-study-hero-img-wrap">
+        <img src="${data.image}" alt="${data.title}" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
 
-    document.querySelectorAll('.impact-stat, .highlight-card, .skill-module, .timeline-entry, .project-module').forEach(el => {
-        observer.observe(el);
-    });
+      <div style="margin-bottom: 2rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        ${tagsHtml}
+      </div>
 
-    // ===== COUNTER ANIMATION - REFINED =====
-    const statValues = document.querySelectorAll('.stat-value');
-    
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = parseInt(entry.target.getAttribute('data-target'));
-                animateCounter(entry.target, target);
-                statsObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.6 });
+      <div class="case-sections-wrap">
+        ${sectionsHtml}
+      </div>
 
-    statValues.forEach(stat => statsObserver.observe(stat));
-
-    function animateCounter(element, target) {
-        let current = 0;
-        const increment = target / 60;
-        const duration = 2000;
-        const stepTime = duration / 60;
-        
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                element.textContent = target + (target > 10 ? '+' : '');
-                clearInterval(timer);
-            } else {
-                element.textContent = Math.floor(current);
-            }
-        }, stepTime);
-    }
-
-    // ===== SKILL BARS ANIMATION - REFINED =====
-    const skillBars = document.querySelectorAll('.bar-fill');
-    
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const level = entry.target.getAttribute('data-level');
-                setTimeout(() => {
-                    entry.target.style.width = level + '%';
-                }, 200);
-                skillObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.6 });
-
-    skillBars.forEach(bar => skillObserver.observe(bar));
-
-    // ===== WORK FILTERS - REFINED =====
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectModules = document.querySelectorAll('.project-module');
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const filter = btn.getAttribute('data-filter');
-            
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            
-            projectModules.forEach(card => {
-                const category = card.getAttribute('data-category');
-                
-                if (filter === 'all' || category === filter) {
-                    card.style.display = 'block';
-                    setTimeout(() => card.classList.add('visible'), 150);
-                } else {
-                    card.classList.remove('visible');
-                    setTimeout(() => card.style.display = 'none', 400);
-                }
-            });
-        });
-    });
-
-    // ===== CONTACT FORM - REFINED =====
-    const contactForm = document.getElementById('contactForm');
-    
-    contactForm?.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-        
-        if (!name || !email || !message) {
-            showNotification('Please fill in all fields', 'warning');
-            return;
-        }
-        
-        const whatsappMessage = `Hello! I'm ${name}%0A%0AEmail: ${email}%0A%0AMessage:%0A${message}%0A%0AThank you!`;
-        const whatsappNumber = '6285741859067';
-        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-        
-        window.open(whatsappURL, '_blank');
-        contactForm.reset();
-        
-        showNotification('Message prepared! Opening WhatsApp...', 'success');
-    });
-
-    function showNotification(message, type) {
-        const notification = document.createElement('div');
-        notification.className = `notification ${type}`;
-        notification.textContent = message;
-        notification.style.cssText = `
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            background: ${type === 'success' ? 'linear-gradient(135deg, #4a9eff, #5ba3ff)' : 'linear-gradient(135deg, #ff6b6b, #ff8e8e)'};
-            color: white;
-            padding: 1.2rem 2rem;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(74, 158, 255, 0.4);
-            z-index: 10000;
-            font-weight: 500;
-            animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        `;
-        
-        document.body.appendChild(notification);
-        
-        setTimeout(() => {
-            notification.style.animation = 'slideOutRight 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-            setTimeout(() => notification.remove(), 400);
-        }, 4000);
-    }
-
-    // ===== SMOOTH SCROLL - REFINED =====
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const offset = 80;
-                const targetPosition = target.offsetTop - offset;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // ===== SCROLL TO TOP - REFINED =====
-    const scrollBtn = document.createElement('button');
-    scrollBtn.innerHTML = '↑';
-    scrollBtn.className = 'scroll-to-top';
-    scrollBtn.setAttribute('aria-label', 'Scroll to top');
-    scrollBtn.style.cssText = `
-        position: fixed;
-        bottom: 2.5rem;
-        right: 2.5rem;
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #4a9eff, #5ba3ff);
-        color: white;
-        border: none;
-        font-size: 1.6rem;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1000;
-        box-shadow: 0 4px 20px rgba(74, 158, 255, 0.4);
+      <div class="case-study-nav-footer">
+        <a href="${data.linkStandalone}" class="btn btn-secondary btn-sm" target="_blank">
+          Open Standalone Page ↗
+        </a>
+        <button type="button" class="btn btn-lime btn-sm switch-next-case" data-next="${data.nextId}">
+          Next Project ↗
+        </button>
+      </div>
     `;
-    
-    document.body.appendChild(scrollBtn);
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 600) {
-            scrollBtn.style.opacity = '1';
-            scrollBtn.style.visibility = 'visible';
-        } else {
-            scrollBtn.style.opacity = '0';
-            scrollBtn.style.visibility = 'hidden';
-        }
-    });
-    
-    scrollBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    scrollBtn.addEventListener('mouseenter', () => {
-        scrollBtn.style.transform = 'translateY(-4px) scale(1.05)';
-        scrollBtn.style.boxShadow = '0 8px 30px rgba(74, 158, 255, 0.6)';
-    });
-    
-    scrollBtn.addEventListener('mouseleave', () => {
-        scrollBtn.style.transform = 'translateY(0) scale(1)';
-        scrollBtn.style.boxShadow = '0 4px 20px rgba(74, 158, 255, 0.4)';
-    });
 
-    console.log('🚀 NASA-Inspired Portfolio Loaded Successfully!');
+    modalBackdrop.classList.add('active');
+    modalBackdrop.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    // Update URL Hash without jump
+    history.replaceState(null, '', `#case-${projectId}`);
+
+    // Re-bind next button inside modal
+    const nextBtn = modalBody.querySelector('.switch-next-case');
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const nextId = nextBtn.getAttribute('data-next');
+        openCaseStudy(nextId);
+      });
+    }
+  }
+
+  function closeCaseStudy() {
+    if (!modalBackdrop) return;
+    modalBackdrop.classList.remove('active');
+    modalBackdrop.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    // Restore work hash
+    if (window.location.hash.startsWith('#case-')) {
+      history.replaceState(null, '', '#work');
+    }
+  }
+
+  // Bind click on case study buttons & cards
+  document.querySelectorAll('[data-open-case]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const projId = btn.getAttribute('data-open-case');
+      openCaseStudy(projId);
+    });
+  });
+
+  modalCloseBtn?.addEventListener('click', closeCaseStudy);
+
+  modalBackdrop?.addEventListener('click', (e) => {
+    if (e.target === modalBackdrop) {
+      closeCaseStudy();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalBackdrop?.classList.contains('active')) {
+      closeCaseStudy();
+    }
+  });
+
+  // Check URL hash on load for deep linking (e.g. #case-eraport)
+  if (window.location.hash.startsWith('#case-')) {
+    const hashProj = window.location.hash.replace('#case-', '');
+    if (caseStudiesData[hashProj]) {
+      setTimeout(() => openCaseStudy(hashProj), 250);
+    }
+  }
+
+  // =========================================================================
+  // 4. CONTACT FORM & WHATSAPP DISPATCH ENGINE (FULL ENGLISH)
+  // =========================================================================
+  const contactForm = document.getElementById('contactForm');
+  const formFeedback = document.getElementById('formFeedback');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const nameInput = document.getElementById('contactName');
+      const emailInput = document.getElementById('contactEmail');
+      const messageInput = document.getElementById('contactMessage');
+
+      const name = nameInput ? nameInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const message = messageInput ? messageInput.value.trim() : '';
+
+      if (!name || !email || !message) {
+        showFormFeedback('Please fill in all required fields.', 'error');
+        return;
+      }
+
+      // Basic email regex
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        showFormFeedback('Please enter a valid email address.', 'error');
+        return;
+      }
+
+      showFormFeedback('Preparing transmission... Redirecting to Nanda on WhatsApp.', 'success');
+
+      // WhatsApp format in English
+      const waNumber = '6285741859067';
+      const waText = encodeURIComponent(
+        `Hello Nanda!\n\nName: ${name}\nEmail: ${email}\n\nProject / Inquiry:\n${message}\n\n(Sent via Nanda Portfolio)`
+      );
+      const waUrl = `https://wa.me/${waNumber}?text=${waText}`;
+
+      setTimeout(() => {
+        window.open(waUrl, '_blank', 'noopener,noreferrer');
+        contactForm.reset();
+        showFormFeedback('Thank you! Message session launched via WhatsApp.', 'success');
+      }, 700);
+    });
+  }
+
+  function showFormFeedback(msg, type) {
+    if (!formFeedback) return;
+    formFeedback.textContent = msg;
+    formFeedback.className = `form-status-feedback ${type}`;
+    formFeedback.style.display = 'block';
+  }
+
+  // =========================================================================
+  // 5. DYNAMIC FOOTER YEAR
+  // =========================================================================
+  const yearElem = document.getElementById('currentYear');
+  if (yearElem) {
+    yearElem.textContent = new Date().getFullYear().toString();
+  }
+
+  // =========================================================================
+  // 6. SMOOTH SCROLL WITH ACCESSIBILITY
+  // =========================================================================
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#' || targetId.startsWith('#case-')) return;
+      
+      const targetElem = document.querySelector(targetId);
+      if (targetElem) {
+        e.preventDefault();
+        targetElem.scrollIntoView({ behavior: 'smooth' });
+        // Set focus for screen readers
+        targetElem.setAttribute('tabindex', '-1');
+        targetElem.focus({ preventScroll: true });
+      }
+    });
+  });
+
+  console.log('⚡ NANDA Portfolio Engine v3.0 Initialized // BOLD DIGITAL IDENTITY (EN)');
 });
-
-

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage Portfolio & Research Center -->
+  <url>
+    <loc>https://portofolionanda-mu.vercel.app/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Project & Case Study: E-Raport (Registered HAKI Copyright 2025) -->
+  <url>
+    <loc>https://portofolionanda-mu.vercel.app/projects/eraport.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Project & Case Study: POS Restaurant Engine -->
+  <url>
+    <loc>https://portofolionanda-mu.vercel.app/projects/pos.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Project & Case Study: ELFAN Command Engine (IoT Architecture) -->
+  <url>
+    <loc>https://portofolionanda-mu.vercel.app/projects/elfan.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Project & Case Study: Modular E-Commerce Platform -->
+  <url>
+    <loc>https://portofolionanda-mu.vercel.app/projects/ecommerce.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Project & Case Study: Enterprise Analytics Dashboard UI/UX -->
+  <url>
+    <loc>https://portofolionanda-mu.vercel.app/projects/dashboard.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+</urlset>

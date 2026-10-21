@@ -1,619 +1,1490 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nanda Ari Wahyu Widagdo | Mission-Driven Digital Professional</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Brand Metadata -->
+  <title>NANDA. — Digital Solutions Developer | Nanda Ari Wahyu Widagdo</title>
+  <meta name="description" content="Official personal portfolio and scholarly research hub of Nanda Ari Wahyu Widagdo (NANDA.). Digital Solutions Developer, Software Engineer, Founder of Solvia Nova, and published researcher in cybersecurity and information systems.">
+  <meta name="keywords" content="Nanda Ari Wahyu Widagdo, Nanda Ari Wahyu, Nanda, Nanda UDB, Digital Solutions Developer, Software Engineer Indonesia, Solvia Nova, Universitas Duta Bangsa Surakarta, TRPL UDB, Data Protection Strategy in Management Information Systems: Risk Analysis and Implementation, IC-ITECHS, SENATIB, E-Raport Berbasis Web SMK Taman Siswa, HAKI PDKI Kemdiktisaintek, Web Developer Portfolio Surakarta, Software Engineer Portfolio">
+  <meta name="author" content="Nanda Ari Wahyu Widagdo">
+  <meta name="theme-color" content="#05070B">
+
+  <!-- Crawling Directives for Google & Search Bots -->
+  <link rel="canonical" href="https://portofolionanda-mu.vercel.app/">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow">
+
+  <!-- Open Graph / Social Rich Preview Cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://portofolionanda-mu.vercel.app/">
+  <meta property="og:site_name" content="NANDA. — Digital Solutions Developer">
+  <meta property="og:title" content="Nanda Ari Wahyu Widagdo — Digital Solutions Developer & Researcher">
+  <meta property="og:description" content="Ideas into systems. Technology into solutions. Futuristic personal portfolio, software architectures, and published scientific research of Nanda Ari Wahyu Widagdo.">
+  <meta property="og:image" content="https://portofolionanda-mu.vercel.app/profil.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nanda Ari Wahyu Widagdo Portrait">
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nanda Ari Wahyu Widagdo — Digital Solutions Developer">
+  <meta name="twitter:description" content="Ideas into systems. Technology into solutions. Portfolio & research publications.">
+  <meta name="twitter:image" content="https://portofolionanda-mu.vercel.app/profil.jpg">
+
+  <!-- Schema.org JSON-LD Structured Data for Google Knowledge Graph & Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://portofolionanda-mu.vercel.app/#website",
+        "url": "https://portofolionanda-mu.vercel.app/",
+        "name": "NANDA. — Digital Solutions Developer & Research Portfolio",
+        "description": "Personal portfolio and academic research index of Nanda Ari Wahyu Widagdo.",
+        "publisher": {
+          "@id": "https://portofolionanda-mu.vercel.app/#person"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://portofolionanda-mu.vercel.app/#webpage",
+        "url": "https://portofolionanda-mu.vercel.app/",
+        "name": "Nanda Ari Wahyu Widagdo — Portfolio & Research Index",
+        "isPartOf": {
+          "@id": "https://portofolionanda-mu.vercel.app/#website"
+        },
+        "about": {
+          "@id": "https://portofolionanda-mu.vercel.app/#person"
+        },
+        "mainEntity": {
+          "@id": "https://portofolionanda-mu.vercel.app/#person"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://portofolionanda-mu.vercel.app/#person",
+        "name": "Nanda Ari Wahyu Widagdo",
+        "alternateName": ["NANDA.", "Nanda Ari Wahyu", "Nanda Widagdo"],
+        "url": "https://portofolionanda-mu.vercel.app/",
+        "image": "https://portofolionanda-mu.vercel.app/profil.jpg",
+        "jobTitle": "Digital Solutions Developer & Software Engineer",
+        "gender": "Male",
+        "nationality": "Indonesian",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Solvia Nova",
+          "url": "https://solvianova.my.id"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Universitas Duta Bangsa Surakarta",
+          "url": "https://udb.ac.id"
+        },
+        "sameAs": [
+          "https://github.com/nandaariwahyu",
+          "https://www.linkedin.com/in/nanda-ari-wahyu-862a033b",
+          "https://www.instagram.com/nannd1707/",
+          "https://scholar.google.com/citations?view_op=search_authors&mauthors=Nanda+Ari+Wahyu+Widagdo",
+          "https://www.researchgate.net/search.Search.html?query=Nanda+Ari+Wahyu+Widagdo"
+        ],
+        "knowsAbout": [
+          "Software Engineering",
+          "Management Information Systems",
+          "Cybersecurity & Data Protection",
+          "Predictive Analytics",
+          "Full-Stack Web Development",
+          "Internet of Things (IoT)",
+          "Laravel",
+          "PHP",
+          "Node.js",
+          "React",
+          "ESP32 Microcontrollers"
+        ]
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://portofolionanda-mu.vercel.app/#research-icitechs",
+        "headline": "Data Protection Strategy in Management Information Systems: Risk Analysis and Implementation",
+        "name": "Data Protection Strategy in Management Information Systems: Risk Analysis and Implementation",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Nanda Ari Wahyu Widagdo"
+          },
+          {
+            "@type": "Person",
+            "name": "Afiat Lintang Winasis"
+          },
+          {
+            "@type": "Person",
+            "name": "Fanisa Halya Putri"
+          },
+          {
+            "@type": "Person",
+            "name": "Fhatoni Nur Wardana"
+          },
+          {
+            "@type": "Person",
+            "name": "Bondan Wahyu Pamekas"
+          }
+        ],
+        "datePublished": "2024-12",
+        "isPartOf": {
+          "@type": "PublicationIssue",
+          "issueNumber": "1",
+          "volumeNumber": "5",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "IC-ITECHS (International Conference on Information Technology and Education for Humanities and Social Sciences)",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Universitas Bhinneka Nusantara (UBHINUS / formerly STIKI Malang)"
+            }
+          }
+        },
+        "description": "An empirical investigation of cybersecurity threat vectors, role-based access control, cryptographic data protection, and disaster recovery strategies in enterprise Management Information Systems.",
+        "about": [
+          "Cybersecurity",
+          "Management Information Systems",
+          "Data Protection",
+          "Risk Analysis",
+          "Access Control"
+        ]
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://portofolionanda-mu.vercel.app/#research-senatib",
+        "headline": "Pengembangan Sistem Informasi Manajemen Event di Universitas Duta Bangsa dengan Fitur Prediksi dan Analisis Grafik",
+        "name": "Pengembangan Sistem Informasi Manajemen Event di Universitas Duta Bangsa dengan Fitur Prediksi dan Analisis Grafik",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Fajar Firmansyah"
+          },
+          {
+            "@type": "Person",
+            "name": "Nanda Ari Wahyu Widagdo"
+          },
+          {
+            "@type": "Person",
+            "name": "Erwin Nashrun Shodiq"
+          },
+          {
+            "@type": "Person",
+            "name": "Randi Wirawan"
+          }
+        ],
+        "datePublished": "2024",
+        "isPartOf": {
+          "@type": "PublicationVolume",
+          "volumeNumber": "1",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Prosiding Seminar Nasional Teknologi Informasi dan Bisnis (SENATIB)",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Universitas Duta Bangsa Surakarta"
+            }
+          }
+        },
+        "description": "Research on institutional event management software architectures integrating automated workflows, predictive attendance trend analysis, and graphical visualization dashboards.",
+        "about": [
+          "Predictive Analytics",
+          "Information Systems",
+          "Event Management",
+          "Data Visualization"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://portofolionanda-mu.vercel.app/#software-eraport",
+        "name": "E-Raport Berbasis Web di Sekolah Menengah Kejuruan Taman Siswa",
+        "author": {
+          "@type": "Person",
+          "name": "Nanda Ari Wahyu Widagdo"
+        },
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "dateCreated": "2025",
+        "copyrightHolder": {
+          "@type": "Person",
+          "name": "Nanda Ari Wahyu Widagdo"
+        },
+        "copyrightYear": "2025",
+        "description": "Official national copyright-registered academic evaluation and automated grade reporting system for vocational high schools."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Typography: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Space Background -->
-    <div class="space-background">
-        <div class="stars"></div>
-        <div class="stars-slow"></div>
-        <div class="stars-twinkle"></div>
-        <div class="shooting-stars"></div>
+  <!-- Ambient Lighting Panels & Technical Grid -->
+  <div class="bg-ambient" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       SECTION 01 — NAVIGATION (CLEAN, MINIMAL & STICKY)
+       ========================================================================= -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      
+      <!-- Left: Blue N monogram and NANDA. -->
+      <a href="#home" class="nav-brand-wrap" aria-label="Nanda Portfolio Home">
+        <span class="nav-n-monogram">N</span>
+        <span class="nav-brand-text">NANDA<span class="dot">.</span></span>
+      </a>
+
+      <!-- Center: Navigation Links -->
+      <nav class="nav-links" id="primaryNavigation" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#solvia-nova" class="nav-link">Solvia Nova</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right: Neon-lime Let's Talk CTA -->
+      <div class="nav-cta-wrapper">
+        <a href="#contact" class="btn btn-lime btn-sm">Let's Talk ↗</a>
+        <button class="mobile-nav-toggle" aria-controls="primaryNavigation" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
     </div>
-    
-    <!-- Navigation -->
-    <nav class="mission-nav">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">NAW<span class="mission-dot">.</span></a>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Mission Start</a></li>
-                <li><a href="#about" class="nav-link">Mission Profile</a></li>
-                <li><a href="#impact" class="nav-link">Mission Impact</a></li>
-                <li><a href="#skills" class="nav-link">Technical Arsenal</a></li>
-                <li><a href="#timeline" class="nav-link">Mission Timeline</a></li>
-                <li><a href="#projects" class="nav-link">Project Archive</a></li>
-                <li><a href="#contact" class="nav-link">Communication</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+  </header>
 
-    <!-- Hero Section - Mission Start -->
-    <section id="home" class="hero-mission">
-        <div class="meteor-field"></div>
-        <div class="hero-container">
-            <div class="mission-frame">
-                <div class="orbit-ring"></div>
-                <div class="orbit-ring orbit-2"></div>
-                <div class="hexagon-frame"></div>
-                <div class="avatar-particles"></div>
-                <img src="./profil.jpg" alt="Nanda Ari Wahyu Widagdo" class="mission-avatar">
-                <div class="avatar-glow"></div>
-                <div class="avatar-shine"></div>
+  <main>
+    <!-- =======================================================================
+         SECTION 02 — HERO (ELEGANT & CINEMATIC COMPOSITION)
+         ======================================================================= -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left side: Personal identity, headline, copy, and CTAs -->
+          <div class="hero-content">
+            <div class="hero-status-pill">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              <span>SYS.ID // 01 &bull; AVAILABLE FOR IMPACT</span>
             </div>
-            <div class="mission-brief">
-                <p class="mission-label">MISSION LOG</p>
-                <h1 class="mission-name">NANDA ARI WAHYU WIDAGDO</h1>
-                <p class="mission-title">Bachelor of Applied Computer Science</p>
-                <div class="mission-roles">
-                    <span class="typing-role"></span>
-                    <span class="cursor-blink">|</span>
-                </div>
-                <p class="mission-tagline">Exploring the digital universe and building systems that create real-world impact.</p>
-                <div class="mission-cta">
-                    <a href="#projects" class="cta-btn primary">Explore Mission Data</a>
-                    <a href="#contact" class="cta-btn secondary">Open Communication</a>
-                </div>
+
+            <p class="hero-eyebrow">HEY, I'M NANDA.</p>
+
+            <h1 class="hero-headline-name">
+              IDEAS INTO SYSTEMS.<br>
+              <span style="background: var(--grad-blue-purple); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">TECHNOLOGY INTO SOLUTIONS.</span>
+            </h1>
+
+            <p class="hero-fullname-sub">NANDA ARI WAHYU WIDAGDO</p>
+            <p class="hero-role-badge">Digital Solutions Developer &bull; Founder of Solvia Nova</p>
+
+            <p class="hero-description">
+              I architect and build digital solutions connecting ideas, technology, and human needs to create real-world impact.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#work" class="btn btn-primary">
+                <span>Explore Selected Works</span>
+                <span class="icon-arrow">↗</span>
+              </a>
+              <a href="./CV Webdeveloper And Digital Marketing.pdf" download class="btn btn-secondary">
+                <span>Download Resume</span>
+                <span class="icon-arrow">↓</span>
+              </a>
             </div>
+
+            <div class="hero-footer-meta">
+              <div class="hero-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 21c-4.97-6.24-8-9.84-8-13A8 8 0 1 1 20 8c0 3.16-3.03 6.76-8 13z"></path>
+                  <circle cx="12" cy="8" r="3"></circle>
+                </svg>
+                <span>Based in Indonesia</span>
+              </div>
+
+              <div class="hero-socials" aria-label="Social Profiles">
+                <!-- GitHub -->
+                <a href="https://github.com/nandaariwahyu" target="_blank" rel="noopener noreferrer" class="social-link-icon" aria-label="GitHub Profile">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/nanda-ari-wahyu-862a033b" target="_blank" rel="noopener noreferrer" class="social-link-icon" aria-label="LinkedIn Profile">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/nannd1707/" target="_blank" rel="noopener noreferrer" class="social-link-icon" aria-label="Instagram Profile">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </a>
+                <!-- Email -->
+                <a href="mailto:nandaariwahyu07@gmail.com" class="social-link-icon" aria-label="Send Email">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Center/right side: Large personal portrait with layered lighting panels -->
+          <div class="hero-portrait-stage">
+            <div class="portrait-composition-wrap">
+              
+              <div class="portrait-glow-aura" aria-hidden="true"></div>
+
+              <!-- Academic Distinction Badge (Clean SVG Icon) -->
+              <div class="floating-spec-badge">
+                <div class="spec-badge-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                </div>
+                <div class="spec-badge-info">
+                  <h4>D4 TRPL Honors Graduate</h4>
+                  <p>GPA 3.95 &bull; Cum Laude &bull; UDB</p>
+                </div>
+              </div>
+
+              <!-- Main Portrait Frame -->
+              <div class="portrait-frame">
+                <div class="portrait-tech-header">
+                  <span>LOC: SURAKARTA, ID</span>
+                  <span>SYS: ONLINE</span>
+                </div>
+                <img src="./profil.jpg" alt="Nanda Ari Wahyu Widagdo" class="portrait-img">
+                <div class="portrait-tech-corner">
+                  <div class="portrait-meta-row">
+                    <span class="portrait-meta-title">Nanda Ari Wahyu</span>
+                    <span class="portrait-meta-badge">DEV // BUILDER</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Compact Decorative Code Card -->
+              <div class="code-identity-card" aria-hidden="true">
+                <div class="code-card-header">
+                  <div class="code-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="code-card-label">nanda.config.ts</span>
+                </div>
+                <code>
+                  <span class="code-keyword">const</span> <span class="code-var">nanda</span> = {<br>
+                  &nbsp;&nbsp;role: <span class="code-str">"Developer"</span>,<br>
+                  &nbsp;&nbsp;focus: [<span class="code-str">"Web"</span>, <span class="code-str">"IoT"</span>, <span class="code-str">"Product"</span>],<br>
+                  &nbsp;&nbsp;mindset: <span class="code-lime">"Build &amp; Solve"</span><br>
+                  };
+                </code>
+              </div>
+
+            </div>
+          </div>
+
         </div>
-        <div class="scroll-guide">
-            <div class="scroll-line"></div>
-            <span>Scroll to explore</span>
-        </div>
+      </div>
     </section>
 
-    <!-- About Section - Mission Profile -->
-    <section id="about" class="mission-profile">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">MISSION PROFILE</span>
-                <h2 class="section-title">About the Mission</h2>
-            </div>
-            <div class="profile-content">
-                <div class="profile-story">
-                    <p class="story-lead">A journey that began with curiosity about how digital systems shape our world.</p>
-                    <p>Graduated from <strong>Universitas Duta Bangsa Surakarta</strong> with a stellar <strong>GPA of 3.95</strong> in Software Engineering Technology, I've dedicated myself to mastering the art and science of building scalable, impactful digital solutions.</p>
-                    <p>My path has been shaped by diverse experiences: serving as <strong>Vice President of the Student Executive Board</strong>, coordinating cross-faculty initiatives, mentoring students as a <strong>Teaching Assistant</strong>, and presenting research at international conferences. Each role has strengthened my ability to lead teams, solve complex problems, and communicate technical concepts effectively.</p>
-                    <p>Beyond development, I've explored the intersection of technology and marketing, working as a <strong>Digital Marketing Strategist</strong> for software houses, where I've learned to bridge the gap between technical capabilities and business impact.</p>
-                    <p class="mission-statement">Today, I'm ready to contribute to global teams and create solutions that make a meaningful difference in the digital universe.</p>
-                </div>
-                <div class="profile-highlights">
-                    <div class="highlight-card">
-                        <div class="card-icon">🎓</div>
-                        <h4>Education</h4>
-                        <p>D4 Software Engineering Technology</p>
-                        <p class="highlight-value">GPA: 3.95</p>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="card-icon">🚀</div>
-                        <h4>Experience</h4>
-                        <p>2+ Years Active</p>
-                        <p class="highlight-value">18+ Projects</p>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="card-icon">🌍</div>
-                        <h4>Global Ready</h4>
-                        <p>International Speaker</p>
-                        <p class="highlight-value">Conference Presenter</p>
-                    </div>
-                </div>
-            </div>
+    <!-- =======================================================================
+         SECTION 03 — SELECTED WORKS (CLEAN ASYMMETRIC EDITORIAL GRID)
+         ======================================================================= -->
+    <section id="work" class="section-wrapper darker-bg">
+      <div class="container">
+        
+        <div class="section-meta-header">
+          <div class="section-badge">02 // SELECTED WORKS</div>
+          <h2 class="section-title-large">
+            REAL PROJECTS.<br>
+            <span class="highlight">REAL IMPACT.</span>
+          </h2>
+          <p class="section-lead">
+            A curated selection of production software platforms, business automation systems, and hardware engineering projects.
+          </p>
         </div>
+
+        <div class="works-editorial-grid">
+          
+          <!-- FEATURED HERO PROJECT: E-Raport (Span 12) -->
+          <article class="project-card featured-hero">
+            <div class="project-media-wrap">
+              <span class="project-tag-pill">FEATURED &bull; EDTECH</span>
+              <img src="./raport.jpg" alt="E-Raport Management System Interface" loading="lazy">
+            </div>
+            <div class="project-info-wrap">
+              <div>
+                <span class="project-index-num">PROJECT // 01</span>
+                <h3 class="project-heading">E-Raport Management System</h3>
+                <p class="project-summary-text">
+                  An enterprise academic governance and digital grading platform engineered for vocational schools. Automates weighted score calculations, multi-role workflows (Admin, Teachers, Homeroom Advisors, Students), and compliant PDF report generation with zero calculation errors.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag-chip">PHP</span>
+                  <span class="tech-tag-chip">Laravel</span>
+                  <span class="tech-tag-chip">MySQL</span>
+                  <span class="tech-tag-chip">Blade</span>
+                  <span class="tech-tag-chip">RBAC Security</span>
+                </div>
+              </div>
+              <div>
+                <a href="./projects/eraport.html" class="project-action-link" data-open-case="eraport">
+                  <span>View Case Study</span>
+                  <span class="icon-arrow">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SECONDARY PROJECT 1: Restaurant POS (Span 6) -->
+          <article class="project-card grid-span-6">
+            <div class="project-media-wrap">
+              <span class="project-tag-pill">BUSINESS SOFTWARE</span>
+              <img src="./pos.jpg" alt="Restaurant Point of Sale System" loading="lazy">
+            </div>
+            <div class="project-info-wrap">
+              <div>
+                <span class="project-index-num">PROJECT // 02</span>
+                <h3 class="project-heading">Restaurant POS Engine</h3>
+                <p class="project-summary-text">
+                  A high-speed culinary point-of-sale system engineered for rush-hour dining (Soto Restaurant). Features instantaneous table ordering, kitchen dispatch, live recipe inventory reconciliation, split-billing, and ESC/POS thermal printing.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag-chip">PHP</span>
+                  <span class="tech-tag-chip">MySQL</span>
+                  <span class="tech-tag-chip">JavaScript</span>
+                  <span class="tech-tag-chip">Thermal ESC/POS</span>
+                </div>
+              </div>
+              <div>
+                <a href="./projects/pos.html" class="project-action-link" data-open-case="pos">
+                  <span>View Case Study</span>
+                  <span class="icon-arrow">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SECONDARY PROJECT 2: ELFAN Command Engine (Span 6) -->
+          <article class="project-card grid-span-6">
+            <div class="project-media-wrap" style="background: #070A10;">
+              <span class="project-tag-pill" style="color: var(--neon-lime); border-color: var(--border-lime);">IOT &amp; EMBEDDED</span>
+              <img src="./elfan-architecture.svg" alt="ELFAN Command Engine IoT Architecture" loading="lazy" style="object-fit: contain; padding: 1.25rem;">
+            </div>
+            <div class="project-info-wrap">
+              <div>
+                <span class="project-index-num">PROJECT // 03</span>
+                <h3 class="project-heading">ELFAN Command Engine</h3>
+                <p class="project-summary-text">
+                  A hardware automation and telemetry controller powered by ESP32 microcontrollers and a local Raspberry Pi gateway over high-frequency MQTT publish/subscribe messaging pipelines.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag-chip">ESP32</span>
+                  <span class="tech-tag-chip">Raspberry Pi</span>
+                  <span class="tech-tag-chip">MQTT Protocol</span>
+                  <span class="tech-tag-chip">Node.js</span>
+                </div>
+              </div>
+              <div>
+                <a href="./projects/elfan.html" class="project-action-link" data-open-case="elfan">
+                  <span>View Case Study</span>
+                  <span class="icon-arrow">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SECONDARY PROJECT 3: E-Commerce Platform (Span 6) -->
+          <article class="project-card grid-span-6">
+            <div class="project-media-wrap">
+              <span class="project-tag-pill">DIGITAL PRODUCT</span>
+              <img src="./ecommerce.jpg" alt="E-Commerce Platform Storefront" loading="lazy">
+            </div>
+            <div class="project-info-wrap">
+              <div>
+                <span class="project-index-num">PROJECT // 04</span>
+                <h3 class="project-heading">Modular E-Commerce Platform</h3>
+                <p class="project-summary-text">
+                  An integrated digital storefront platform featuring multi-variant product catalogs, real-time cart state management, transactional stock reservation during checkout, and back-office order fulfillment.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag-chip">Laravel</span>
+                  <span class="tech-tag-chip">Vue.js</span>
+                  <span class="tech-tag-chip">MySQL</span>
+                  <span class="tech-tag-chip">REST API</span>
+                </div>
+              </div>
+              <div>
+                <a href="./projects/ecommerce.html" class="project-action-link" data-open-case="ecommerce">
+                  <span>View Case Study</span>
+                  <span class="icon-arrow">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SECONDARY PROJECT 4: Enterprise Dashboard (Span 6) -->
+          <article class="project-card grid-span-6">
+            <div class="project-media-wrap">
+              <span class="project-tag-pill">UI/UX &amp; ANALYTICS</span>
+              <img src="./dashboardadmin.jpg" alt="Enterprise Dashboard Interface Design" loading="lazy">
+            </div>
+            <div class="project-info-wrap">
+              <div>
+                <span class="project-index-num">PROJECT // 05</span>
+                <h3 class="project-heading">Enterprise Dashboard UI/UX</h3>
+                <p class="project-summary-text">
+                  A comprehensive multi-tier data control interface and design system created in Figma. Prioritizes dark-mode ocular ergonomics, modular KPI data cards, and zero cognitive overload for administrative operators.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag-chip">Figma</span>
+                  <span class="tech-tag-chip">Design System</span>
+                  <span class="tech-tag-chip">Dark Theme UI</span>
+                  <span class="tech-tag-chip">WCAG 2.1</span>
+                </div>
+              </div>
+              <div>
+                <a href="./projects/dashboard.html" class="project-action-link" data-open-case="dashboard">
+                  <span>View Case Study</span>
+                  <span class="icon-arrow">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
     </section>
 
-    <!-- Impact Section - Mission Impact -->
-    <section id="impact" class="mission-impact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">MISSION IMPACT</span>
-                <h2 class="section-title">Achievements & Metrics</h2>
+    <!-- =======================================================================
+         SECTION 04 — WHAT I DO (FOUR COMPACT CARDS IN ONE DESKTOP ROW)
+         ======================================================================= -->
+    <section id="services" class="section-wrapper">
+      <div class="container">
+        
+        <div class="section-meta-header">
+          <div class="section-badge">03 // WHAT I DO</div>
+          <h2 class="section-title-large">
+            MORE THAN CODE.<br>
+            <span class="highlight">BUILT TO SOLVE.</span>
+          </h2>
+        </div>
+
+        <div class="services-single-row">
+          
+          <!-- Card 01 -->
+          <div class="service-card">
+            <div class="service-header-row">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="service-lime-num">01 //</span>
             </div>
-            <div class="impact-grid">
-                <div class="impact-stat">
-                    <div class="stat-orbit"></div>
-                    <div class="stat-icon">🚀</div>
-                    <div class="stat-value" data-target="18">0</div>
-                    <div class="stat-label">Completed Missions</div>
-                </div>
-                <div class="impact-stat">
-                    <div class="stat-orbit"></div>
-                    <div class="stat-icon">⭐</div>
-                    <div class="stat-value" data-target="37">0</div>
-                    <div class="stat-label">Satisfied Clients</div>
-                </div>
-                <div class="impact-stat">
-                    <div class="stat-orbit"></div>
-                    <div class="stat-icon">⏱️</div>
-                    <div class="stat-value" data-target="2">0</div>
-                    <div class="stat-label">Years of Experience</div>
-                </div>
-                <div class="impact-stat">
-                    <div class="stat-orbit"></div>
-                    <div class="stat-icon">💻</div>
-                    <div class="stat-value" data-target="10">0</div>
-                    <div class="stat-label">Technologies Mastered</div>
-                </div>
+            <h3 class="service-title">Software Development</h3>
+            <p class="service-desc">
+              Developing full-stack web applications, resilient backend architectures, and secure RESTful APIs tailored to specific operational workflows.
+            </p>
+          </div>
+
+          <!-- Card 02 -->
+          <div class="service-card">
+            <div class="service-header-row">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <span class="service-lime-num">02 //</span>
             </div>
+            <h3 class="service-title">Digital Products</h3>
+            <p class="service-desc">
+              Transforming conceptual ideas into functional digital products through deep problem discovery, user experience architecture, and clean implementation.
+            </p>
+          </div>
+
+          <!-- Card 03 -->
+          <div class="service-card">
+            <div class="service-header-row">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </div>
+              <span class="service-lime-num">03 //</span>
+            </div>
+            <h3 class="service-title">Creative Technology</h3>
+            <p class="service-desc">
+              Bridging physical hardware and software via edge microcontrollers, IoT telemetry, and smart workflow automations.
+            </p>
+          </div>
+
+          <!-- Card 04 -->
+          <div class="service-card">
+            <div class="service-header-row">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <span class="service-lime-num">04 //</span>
+            </div>
+            <h3 class="service-title">Digital Growth</h3>
+            <p class="service-desc">
+              Accelerating digital product adoption through targeted growth strategies, technical branding, and structured user acquisition.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 05 — TOOLS I USE (PREMIUM SVG ICON GRID & STATS)
+         ======================================================================= -->
+    <section id="toolkit" class="section-wrapper darker-bg">
+      <div class="container">
+        
+        <div class="section-meta-header">
+          <div class="section-badge">04 // TOOLS I USE.</div>
+          <h2 class="section-title-large">
+            ENGINEERING STACK.<br>
+            <span class="highlight">VERIFIED CAPABILITIES.</span>
+          </h2>
+        </div>
+
+        <div class="toolkit-split-layout">
+          
+          <!-- Area 1: Technology Icon Grid (Clean Vector SVGs) -->
+          <div class="toolkit-icon-grid-panel">
+            <div class="toolkit-icon-grid">
+              
+              <!-- Laravel -->
+              <div class="tool-grid-item">
+                <div class="tool-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M8.2 2.6L2.4 5.9v6.6l5.8 3.3 5.8-3.3V5.9L8.2 2.6zm0 2.3l3.8 2.2-3.8 2.2-3.8-2.2 3.8-2.2zm-4.1 3.5l3.5 2v4.4l-3.5-2V8.4zm4.7 6.4V10.4l3.5-2v4.4l-3.5 2zM15.8 7.4l-5.8 3.3v6.6l5.8 3.3 5.8-3.3v-6.6l-5.8-3.3zm0 2.3l3.8 2.2-3.8 2.2-3.8-2.2 3.8-2.2zm-4.1 3.5l3.5 2v4.4l-3.5-2v-4.4zm4.7 6.4v-4.4l3.5-2v4.4l-3.5 2z"/></svg>
+                </div>
+                <span class="tool-name">Laravel</span>
+              </div>
+
+              <!-- PHP -->
+              <div class="tool-grid-item">
+                <div class="tool-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-5 13.5H5.5V8.5h3.2c1.4 0 2.3.9 2.3 2.5 0 1.5-.9 2.5-2.3 2.5H7v2zm0-4.5h1.5c.6 0 1-.4 1-1s-.4-1-1-1H7v2zm8.5 4.5h-1.5V8.5h3.2c1.4 0 2.3.9 2.3 2.5 0 1.5-.9 2.5-2.3 2.5h-1.7v2zm0-4.5h1.5c.6 0 1-.4 1-1s-.4-1-1-1h-1.5v2z"/></svg>
+                </div>
+                <span class="tool-name">PHP</span>
+              </div>
+
+              <!-- Node.js -->
+              <div class="tool-grid-item">
+                <div class="tool-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M12 2l9 5.2v10.4L12 23l-9-5.4V7.2L12 2zm0 2.3L4.7 8.5v7.5l7.3 4.3 7.3-4.3V8.5L12 4.3z"/></svg>
+                </div>
+                <span class="tool-name">Node.js</span>
+              </div>
+
+              <!-- React -->
+              <div class="tool-grid-item">
+                <div class="tool-icon-wrap">
+                  <svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(30 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(90 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(150 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>
+                </div>
+                <span class="tool-name">React</span>
+              </div>
+
+              <!-- Next.js -->
+              <div class="tool-grid-item">
+                <div class="tool-icon-wrap">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 16V8l8 10V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                </div>
+                <span class="tool-name">Next.js</span>
+              </div>
+
+              <!-- MySQL -->
+              <div class="tool-grid-item">
+                <div class="tool-icon-wrap">
+                  <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                </div>
+                <span class="tool-name">MySQL</span>
+              </div>
+
+              <!-- Python -->
+              <div class="tool-grid-item">
+                <div class="tool-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M12 2C8.5 2 6 3.5 6 5.5V8h6V9H4C2.5 9 1 10.5 1 13c0 2.5 1.5 4 3 4h2v-2c0-1.7 1.3-3 3-3h6c1.7 0 3-1.3 3-3V5.5C22 3.5 19.5 2 12 2zM9 4.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 17.5c3.5 0 6-1.5 6-3.5V16h-6v-1h8c1.5 0 3-1.5 3-4 0-2.5-1.5-4-3-4h-2v2c0 1.7-1.3 3-3 3H9c-1.7 0-3 1.3-3 3v3.5C6 20.5 8.5 22 12 22zm3-2.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
+                </div>
+                <span class="tool-name">Python</span>
+              </div>
+
+              <!-- ESP32 -->
+              <div class="tool-grid-item">
+                <div class="tool-icon-wrap">
+                  <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="8" y="8" width="8" height="8" rx="1" fill="currentColor"/><circle cx="6" cy="2" r="1" fill="currentColor"/><circle cx="12" cy="2" r="1" fill="currentColor"/><circle cx="18" cy="2" r="1" fill="currentColor"/><circle cx="6" cy="22" r="1" fill="currentColor"/><circle cx="12" cy="22" r="1" fill="currentColor"/><circle cx="18" cy="22" r="1" fill="currentColor"/></svg>
+                </div>
+                <span class="tool-name">ESP32</span>
+              </div>
+
+              <!-- Raspberry Pi -->
+              <div class="tool-grid-item">
+                <div class="tool-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M12 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4.5 4C6.1 8 5 9.1 5 10.5S6.1 13 7.5 13s2.5-1.1 2.5-2.5S8.9 8 7.5 8zm9 0c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5 2.5-1.1 2.5-2.5S17.9 8 16.5 8zM12 11c-2.8 0-5 2.2-5 5 0 3 2.2 5 5 5s5-2 5-5c0-2.8-2.2-5-5-5z"/></svg>
+                </div>
+                <span class="tool-name">Raspberry Pi</span>
+              </div>
+
+              <!-- Figma -->
+              <div class="tool-grid-item">
+                <div class="tool-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M8 2h4v5H8V2zm4 0h4c1.7 0 3 1.3 3 3s-1.3 3-3 3h-4V2zM8 7h4v5H8V7zm4 5h4c1.7 0 3 1.3 3 3s-1.3 3-3 3h-4v-6zm-4 5v-5h4v5c0 1.7-1.3 3-3 3s-3-1.3-3-3z"/></svg>
+                </div>
+                <span class="tool-name">Figma</span>
+              </div>
+
+              <!-- Git -->
+              <div class="tool-grid-item">
+                <div class="tool-icon-wrap">
+                  <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="9" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6 9v6M9 6h4a5 5 0 0 1 5 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                </div>
+                <span class="tool-name">Git</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Area 2: Statistics Panel (Verified metrics) -->
+          <div class="toolkit-stats-panel">
+            <div class="toolkit-stat-row">
+              <div class="stat-value">3.95</div>
+              <div class="stat-label">Academic GPA (TRPL Cum Laude)</div>
+            </div>
+
+            <div class="toolkit-stat-row">
+              <div class="stat-value">2</div>
+              <div class="stat-label">Published Research Papers (IC-ITECHS &amp; SENATIB)</div>
+            </div>
+
+            <div class="toolkit-stat-row">
+              <div class="stat-value">1</div>
+              <div class="stat-label">Registered Intellectual Property (PDKI HAKI 2025)</div>
+            </div>
+
+            <div class="toolkit-stat-row">
+              <div class="stat-value">18+</div>
+              <div class="stat-label">Delivered Software Projects &amp; Systems</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 06 — NOT JUST CODE, BUT IMPACT (EDITORIAL STRIP)
+         ======================================================================= -->
+    <section id="impact" class="section-wrapper">
+      <div class="container">
+        
+        <div class="section-meta-header" style="text-align: center; max-width: 640px; margin-inline: auto;">
+          <div class="section-badge lime">05 // CORE PHILOSOPHY</div>
+          <h2 class="section-title-large">
+            MORE THAN JUST SYNTAX.<br>
+            <span class="highlight">CREATING REAL SOLUTIONS.</span>
+          </h2>
+          <p class="section-lead" style="margin-inline: auto;">
+            Translating ideas into physical and digital systems that resolve genuine problems for people and organizations.
+          </p>
+        </div>
+
+        <div class="impact-editorial-strip">
+          
+          <!-- Card 1: Solving Real Problems -->
+          <article class="impact-card">
+            <div class="impact-card-media">
+              <img src="./raport.jpg" alt="Solving Real Problems with Software" loading="lazy">
+            </div>
+            <div class="impact-card-body">
+              <div class="impact-card-tag">THEME 01 // SOLUTIONS</div>
+              <h3 class="impact-card-title">Solving Real Problems</h3>
+              <p class="impact-card-desc">
+                Replacing slow, fragile spreadsheets with cohesive web platforms, including automated academic evaluation and synchronized table POS operations.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 2: Building Useful Products -->
+          <article class="impact-card">
+            <div class="impact-card-media">
+              <img src="./dashboardadmin.jpg" alt="Building Useful Products" loading="lazy">
+            </div>
+            <div class="impact-card-body">
+              <div class="impact-card-tag">THEME 02 // PRODUCTS</div>
+              <h3 class="impact-card-title">Building Useful Products</h3>
+              <p class="impact-card-desc">
+                Structuring intuitive interfaces and ergonomic analytical dashboards that protect operators from cognitive overload during complex data workflows.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 3: Exploring New Technologies -->
+          <article class="impact-card">
+            <div class="impact-card-media" style="background: #070A10;">
+              <img src="./elfan-architecture.svg" alt="Exploring New Technologies" loading="lazy" style="object-fit: contain; padding: 1rem;">
+            </div>
+            <div class="impact-card-body">
+              <div class="impact-card-tag">THEME 03 // EXPLORATION</div>
+              <h3 class="impact-card-title">Exploring New Technologies</h3>
+              <p class="impact-card-desc">
+                Experimenting with ESP32 microcontrollers, Raspberry Pi gateways, and MQTT protocols to bridge software logic into direct physical hardware control.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 06 — RESEARCH & PUBLICATIONS (VERIFIED SCHOLARLY WORKS)
+         ======================================================================= -->
+    <section id="research" class="section-wrapper darker-bg">
+      <div class="container">
+        
+        <div class="section-meta-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
+          <div>
+            <div class="section-badge lime">06 // RESEARCH &amp; PUBLICATIONS</div>
+            <h2 class="section-title-large">
+              PEER-REVIEWED PAPERS.<br>
+              <span class="highlight">INTELLECTUAL PROPERTY.</span>
+            </h2>
+            <p class="section-lead">
+              Bridging technical software engineering with rigorous scientific inquiry in cybersecurity, predictive data analytics, and registered intellectual property.
+            </p>
+          </div>
+          <div>
+            <a href="https://scholar.google.com/scholar?q=%22Nanda+Ari+Wahyu+Widagdo%22" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="Search Nanda Ari Wahyu Widagdo on Google Scholar">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;">
+                <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 12a8 8 0 0 1 7.162 1.44L24 9.5 12 0z"/>
+              </svg>
+              <span>Verify on Google Scholar</span>
+              <span class="icon-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="research-grid">
+          
+          <!-- Publication 01: IC-ITECHS 2024 -->
+          <article class="research-card">
+            <div>
+              <div class="research-card-header">
+                <span class="research-type-badge">INTERNATIONAL JOURNAL // IC-ITECHS</span>
+                <span class="research-date">Dec 2024</span>
+              </div>
+              <h3 class="research-title">
+                Data Protection Strategy in Management Information Systems: Risk Analysis and Implementation
+              </h3>
+              <p class="research-authors">
+                <strong>Authors:</strong> Nanda Ari Wahyu Widagdo, Afiat Lintang Winasis, Fanisa Halya Putri, Fhatoni Nur Wardana, Bondan Wahyu Pamekas
+              </p>
+              <p class="research-venue">
+                <em>IC-ITECHS (International Conference on Information Technology and Education for Humanities and Social Sciences)</em> &bull; Vol. 5, No. 1, 2024
+              </p>
+              <p class="research-summary">
+                Investigates risk mitigation architectures for enterprise Management Information Systems against cyber threats, human errors, and structural software vulnerabilities. Outlines empirical frameworks for Role-Based Access Control (RBAC), end-to-end data encryption, and operational disaster recovery protocols.
+              </p>
+              <div class="research-tags">
+                <span class="tech-tag-chip">Cybersecurity</span>
+                <span class="tech-tag-chip">Risk Analysis</span>
+                <span class="tech-tag-chip">Access Control (RBAC)</span>
+                <span class="tech-tag-chip">Data Encryption</span>
+                <span class="tech-tag-chip">Disaster Recovery</span>
+              </div>
+            </div>
+            <div class="research-footer">
+              <span class="research-status-pill">
+                <span class="pulse-dot"></span> Peer-Reviewed &amp; Published
+              </span>
+              <a href="https://scholar.google.com/scholar?q=Data+Protection+Strategy+in+Management+Information+Systems+Nanda+Ari+Wahyu+Widagdo" target="_blank" rel="noopener noreferrer" class="project-action-link" style="font-size: 0.8125rem;">
+                <span>Google Scholar</span>
+                <span class="icon-arrow">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Publication 02: SENATIB 2024 -->
+          <article class="research-card">
+            <div>
+              <div class="research-card-header">
+                <span class="research-type-badge">CONFERENCE PROCEEDING // SENATIB</span>
+                <span class="research-date">2024</span>
+              </div>
+              <h3 class="research-title">
+                Pengembangan Sistem Informasi Manajemen Event di Universitas Duta Bangsa dengan Fitur Prediksi dan Analisis Grafik
+              </h3>
+              <p class="research-authors">
+                <strong>Authors:</strong> Fajar Firmansyah, Nanda Ari Wahyu Widagdo, Erwin Nashrun Shodiq, Randi Wirawan
+              </p>
+              <p class="research-venue">
+                <em>Prosiding Seminar Nasional Teknologi Informasi dan Bisnis (SENATIB)</em> &bull; Vol. 1, 2024
+              </p>
+              <p class="research-summary">
+                Engineered an institutional event management system integrating automated participant registration workflows, predictive attendance trend algorithms, and analytical graphical dashboards for university operational decision-making.
+              </p>
+              <div class="research-tags">
+                <span class="tech-tag-chip">Predictive Analytics</span>
+                <span class="tech-tag-chip">Data Visualization</span>
+                <span class="tech-tag-chip">Web Architecture</span>
+                <span class="tech-tag-chip">Information Systems</span>
+              </div>
+            </div>
+            <div class="research-footer">
+              <span class="research-status-pill">
+                <span class="pulse-dot"></span> National Proceeding
+              </span>
+              <a href="https://scholar.google.com/scholar?q=Pengembangan+Sistem+Informasi+Manajemen+Event+di+Universitas+Duta+Bangsa+Nanda+Ari+Wahyu+Widagdo" target="_blank" rel="noopener noreferrer" class="project-action-link" style="font-size: 0.8125rem;">
+                <span>Google Scholar</span>
+                <span class="icon-arrow">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Publication 03: HAKI / Intellectual Property -->
+          <article class="research-card ip-card">
+            <div>
+              <div class="research-card-header">
+                <span class="research-type-badge lime">REGISTERED COPYRIGHT // KEMDIKTISAINTEK</span>
+                <span class="research-date">2025</span>
+              </div>
+              <h3 class="research-title">
+                E-Raport Berbasis Web di Sekolah Menengah Kejuruan Taman Siswa
+              </h3>
+              <p class="research-authors">
+                <strong>Inventors:</strong> Nanda Ari Wahyu Widagdo, Vihi Atina, Ridwan Dwi Irawan
+              </p>
+              <p class="research-venue">
+                <em>Pangkalan Data Kekayaan Intelektual (PDKI) Indonesia</em> &bull; Universitas Duta Bangsa Surakarta
+              </p>
+              <p class="research-summary">
+                Granted official government copyright protection (Hak Cipta) for the software design, source code architecture, and database algorithms of the vocational high school digital academic evaluation and automated report card calculation platform.
+              </p>
+              <div class="research-tags">
+                <span class="tech-tag-chip">Registered Copyright</span>
+                <span class="tech-tag-chip">PDKI Verified</span>
+                <span class="tech-tag-chip">EdTech Architecture</span>
+                <span class="tech-tag-chip">Laravel / MySQL</span>
+              </div>
+            </div>
+            <div class="research-footer">
+              <span class="research-status-pill" style="color: var(--neon-lime);">
+                <span class="pulse-dot"></span> Official Copyright Granted
+              </span>
+              <a href="./projects/eraport.html" data-open-case="eraport" class="project-action-link" style="font-size: 0.8125rem;">
+                <span>View System Case</span>
+                <span class="icon-arrow">↗</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 07 — PERSONAL STORY
+         ======================================================================= -->
+    <section id="about" class="section-wrapper">
+      <div class="container">
+        
+        <div class="story-grid-layout">
+          
+          <!-- Left side: Narrative story & compact list -->
+          <div class="story-narrative-column">
+            <div class="section-badge">07 // THE PERSON BEHIND THE WORK.</div>
             
-            <div class="tech-constellation">
-                <h3 class="tech-title">Technology Stack</h3>
-                <div class="tech-grid">
-                    <span class="tech-item">React</span>
-                    <span class="tech-item">Next.js</span>
-                    <span class="tech-item">Node.js</span>
-                    <span class="tech-item">TypeScript</span>
-                    <span class="tech-item">PHP</span>
-                    <span class="tech-item">Laravel</span>
-                    <span class="tech-item">Python</span>
-                    <span class="tech-item">MySQL</span>
-                    <span class="tech-item">PostgreSQL</span>
-                    <span class="tech-item">Flutter</span>
-                </div>
+            <h2 class="section-title-large" style="margin-bottom: 0.5rem;">
+              CURIOUS BUILDER.<br>
+              <span class="highlight">PROBLEM SOLVER.</span>
+            </h2>
+
+            <blockquote class="story-lead-quote">
+              "I believe technology should elevate human potential, and I am driven to build resilient systems that create lasting, measurable value."
+            </blockquote>
+
+            <p class="story-body-copy">
+              Combining a strong academic foundation in Software Engineering with executive student government leadership, published scientific research, and real-world product delivery, I bridge technical depth with human-centered empathy.
+            </p>
+
+            <div class="story-compact-list">
+              <div class="story-list-item">
+                <span class="dot"></span>
+                <span>Software Engineering Graduate (Cum Laude)</span>
+              </div>
+              <div class="story-list-item">
+                <span class="dot"></span>
+                <span>Full-Stack Web &amp; API Architecture</span>
+              </div>
+              <div class="story-list-item">
+                <span class="dot"></span>
+                <span>IoT &amp; Hardware Automation Systems</span>
+              </div>
+              <div class="story-list-item">
+                <span class="dot"></span>
+                <span>Entrepreneurship &amp; Solvia Nova Founder</span>
+              </div>
             </div>
+          </div>
+
+          <!-- Right side: Large portrait with blue-purple frame -->
+          <div class="story-portrait-column">
+            <div class="story-portrait-frame">
+              <img src="./profil.jpg" alt="Nanda Ari Wahyu Widagdo" loading="lazy">
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Skills Section - Technical Arsenal -->
-    <section id="skills" class="technical-arsenal">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">TECHNICAL ARSENAL</span>
-                <h2 class="section-title">Core Capabilities</h2>
-            </div>
-            <div class="arsenal-grid">
-                <div class="skill-module">
-                    <h3>Frontend Systems</h3>
-                    <div class="skill-bar">
-                        <span>HTML</span>
-                        <div class="bar-track"><div class="bar-fill" data-level="90"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <span>CSS</span>
-                        <div class="bar-track"><div class="bar-fill" data-level="85"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <span>JavaScript</span>
-                        <div class="bar-track"><div class="bar-fill" data-level="80"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <span>Bootstrap</span>
-                        <div class="bar-track"><div class="bar-fill" data-level="75"></div></div>
-                    </div>
-                </div>
-                
-                <div class="skill-module">
-                    <h3>Backend Systems</h3>
-                    <div class="skill-bar">
-                        <span>PHP</span>
-                        <div class="bar-track"><div class="bar-fill" data-level="85"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <span>Laravel</span>
-                        <div class="bar-track"><div class="bar-fill" data-level="80"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <span>MySQL</span>
-                        <div class="bar-track"><div class="bar-fill" data-level="75"></div></div>
-                    </div>
-                </div>
-                
-                <div class="skill-module">
-                    <h3>Tools & Creative Stack</h3>
-                    <div class="skill-bar">
-                        <span>VS Code</span>
-                        <div class="bar-track"><div class="bar-fill" data-level="90"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <span>Figma</span>
-                        <div class="bar-track"><div class="bar-fill" data-level="70"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <span>Canva</span>
-                        <div class="bar-track"><div class="bar-fill" data-level="70"></div></div>
-                    </div>
-                    <div class="skill-bar">
-                        <span>CapCut</span>
-                        <div class="bar-track"><div class="bar-fill" data-level="65"></div></div>
-                    </div>
-                </div>
-                
-                <div class="skill-module">
-                    <h3>Core Human Skills</h3>
-                    <ul class="human-skills">
-                        <li>Leadership & Team Command</li>
-                        <li>Analytical Problem Solving</li>
-                        <li>Strategic Communication</li>
-                        <li>Time & Mission Management</li>
-                        <li>Public Speaking</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- =======================================================================
+         SECTION 08 — EXPERIENCE TIMELINE
+         ======================================================================= -->
+    <section id="journey" class="section-wrapper darker-bg">
+      <div class="container">
+        
+        <div class="section-meta-header" style="text-align: center; max-width: 640px; margin-inline: auto;">
+          <div class="section-badge">08 // JOURNEY SO FAR.</div>
+          <h2 class="section-title-large">
+            MY JOURNEY.<br>
+            <span class="highlight">STILL BUILDING.</span>
+          </h2>
+          <p class="section-lead" style="margin-inline: auto;">
+            A verified track record of student executive leadership, published scientific research, and academic distinction.
+          </p>
         </div>
+
+        <div class="journey-timeline-track">
+          
+          <!-- Milestone 1: Registered Copyright (HAKI) -->
+          <div class="timeline-milestone academic">
+            <div class="milestone-node"></div>
+            <div class="milestone-card">
+              <div class="milestone-header-row">
+                <h3 class="milestone-role-title">Inventor &amp; Software Architect — Official Copyright (HAKI)</h3>
+                <span class="milestone-date-badge">2025</span>
+              </div>
+              <div class="milestone-org-name">Pangkalan Data Kekayaan Intelektual (Kemdiktisaintek RI)</div>
+              <p class="milestone-desc-text">
+                Granted national intellectual property copyright for the web application architecture: <em>"E-Raport Berbasis Web Di Sekolah Menengah Kejuruan Taman Siswa"</em> (with Universitas Duta Bangsa Surakarta).
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 2: Student VP -->
+          <div class="timeline-milestone">
+            <div class="milestone-node"></div>
+            <div class="milestone-card">
+              <div class="milestone-header-row">
+                <h3 class="milestone-role-title">Student Executive Vice President</h3>
+                <span class="milestone-date-badge">2024 - 2025</span>
+              </div>
+              <div class="milestone-org-name">BEM Universitas Duta Bangsa Surakarta</div>
+              <p class="milestone-desc-text">
+                Directed university-wide student governance across all faculties. Fostered cross-departmental collaboration through internal digital workflow initiatives.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 3: Solvia Nova -->
+          <div class="timeline-milestone">
+            <div class="milestone-node"></div>
+            <div class="milestone-card">
+              <div class="milestone-header-row">
+                <h3 class="milestone-role-title">Founder &amp; Digital Solutions Developer</h3>
+                <span class="milestone-date-badge">2024 - Present</span>
+              </div>
+              <div class="milestone-org-name">Solvia Nova</div>
+              <p class="milestone-desc-text">
+                Architecting tailored software solutions, commercial prototypes, and creative technology explorations for businesses and independent initiatives.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 4: IC-ITECHS Research Paper -->
+          <div class="timeline-milestone academic">
+            <div class="milestone-node"></div>
+            <div class="milestone-card">
+              <div class="milestone-header-row">
+                <h3 class="milestone-role-title">Lead Author — International Journal Research Paper</h3>
+                <span class="milestone-date-badge">Dec 2024</span>
+              </div>
+              <div class="milestone-org-name">IC-ITECHS &bull; Universitas Bhinneka Nusantara (UBHINUS / formerly STIKI Malang)</div>
+              <p class="milestone-desc-text">
+                Authored and published research paper: <em>"Data Protection Strategy in Management Information Systems: Risk Analysis and Implementation"</em> (Vol. 5, No. 1) analyzing cybersecurity threat models and encryption governance.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 5: SENATIB Research Paper -->
+          <div class="timeline-milestone academic">
+            <div class="milestone-node"></div>
+            <div class="milestone-card">
+              <div class="milestone-header-row">
+                <h3 class="milestone-role-title">Co-Author — National Conference Proceeding</h3>
+                <span class="milestone-date-badge">2024</span>
+              </div>
+              <div class="milestone-org-name">SENATIB &bull; Universitas Duta Bangsa Surakarta</div>
+              <p class="milestone-desc-text">
+                Co-authored research paper: <em>"Pengembangan Sistem Informasi Manajemen Event di Universitas Duta Bangsa dengan Fitur Prediksi dan Analisis Grafik"</em> on predictive analytics and graphical dashboards.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 6: Freelance Digital Marketing -->
+          <div class="timeline-milestone">
+            <div class="milestone-node"></div>
+            <div class="milestone-card">
+              <div class="milestone-header-row">
+                <h3 class="milestone-role-title">Freelance Digital Marketing Strategist</h3>
+                <span class="milestone-date-badge">2024 - 2025</span>
+              </div>
+              <div class="milestone-org-name">Software House Project Master ID</div>
+              <p class="milestone-desc-text">
+                Directed digital marketing initiatives and client acquisition channels for web and mobile development services, scaling client reach.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 7: UNTIRTA Speaker -->
+          <div class="timeline-milestone">
+            <div class="milestone-node"></div>
+            <div class="milestone-card">
+              <div class="milestone-header-row">
+                <h3 class="milestone-role-title">Speaker &amp; Web Development Instructor</h3>
+                <span class="milestone-date-badge">2024</span>
+              </div>
+              <div class="milestone-org-name">Universitas Sultan Ageng Tirtayasa &bull; Project Master ID</div>
+              <p class="milestone-desc-text">
+                Delivered the keynote training on "In-Depth Website Training" at UNTIRTA covering modern HTML, CSS, responsive layouts, and UI/UX design standards.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 8: Faculty Division Coordinator -->
+          <div class="timeline-milestone">
+            <div class="milestone-node"></div>
+            <div class="milestone-card">
+              <div class="milestone-header-row">
+                <h3 class="milestone-role-title">Faculty Division Coordinator</h3>
+                <span class="milestone-date-badge">2023 - 2024</span>
+              </div>
+              <div class="milestone-org-name">BEM Faculty of Computer Science (FIKOM UDB)</div>
+              <p class="milestone-desc-text">
+                Headed organizational operations, mentored student members, and initiated campus digital automation activities.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 9: Teaching Assistant -->
+          <div class="timeline-milestone">
+            <div class="milestone-node"></div>
+            <div class="milestone-card">
+              <div class="milestone-header-row">
+                <h3 class="milestone-role-title">Teaching Assistant &amp; Lab Instructor</h3>
+                <span class="milestone-date-badge">2023</span>
+              </div>
+              <div class="milestone-org-name">Universitas Duta Bangsa Surakarta (Training at STABN)</div>
+              <p class="milestone-desc-text">
+                Guided undergraduate students through interactive software design fundamentals, visual animation logic, and UI component principles.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 10: Education Degree -->
+          <div class="timeline-milestone academic">
+            <div class="milestone-node"></div>
+            <div class="milestone-card">
+              <div class="milestone-header-row">
+                <h3 class="milestone-role-title">Bachelor of Applied Software Engineering (D4 TRPL)</h3>
+                <span class="milestone-date-badge">Graduated &bull; GPA 3.95 (Cum Laude)</span>
+              </div>
+              <div class="milestone-org-name">Universitas Duta Bangsa Surakarta</div>
+              <p class="milestone-desc-text">
+                Graduated with top academic honors (GPA 3.95). Specialized in software architecture, relational database engineering, and applied computing.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
-    <!-- Experience Section - Mission Timeline -->
-    <section id="timeline" class="mission-timeline">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">MISSION TIMELINE</span>
-                <h2 class="section-title">Journey Through Time</h2>
-            </div>
-            <div class="timeline-track">
-                <div class="timeline-entry">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2024 - 2025</span>
-                        <h3>Vice President of Student Executive Board</h3>
-                        <p class="timeline-org">BEM Universitas Duta Bangsa Surakarta</p>
-                        <p>Led coordination of all university BEM activities and inter-faculty relations. Enhanced cross-program collaboration through development of internal organizational information systems.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-entry">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2023 - 2024</span>
-                        <h3>Faculty Organization Coordinator</h3>
-                        <p class="timeline-org">BEM Faculty of Computer Science</p>
-                        <p>Managed divisional operations and guided team members in executing innovative faculty initiatives. Contributed to web development projects and digital transformation efforts.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-entry">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2023</span>
-                        <h3>Teaching Assistant</h3>
-                        <p class="timeline-org">Universitas Duta Bangsa Surakarta</p>
-                        <p>Mentored students in creating simple animations and interactive applications. Explained fundamental programming logic and interface design concepts to support learning outcomes.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-entry">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2024 - 2025</span>
-                        <h3>Freelance Digital Marketing Strategist</h3>
-                        <p class="timeline-org">Software House Project Master ID</p>
-                        <p>Developed and executed digital marketing strategies to promote web and app development services. Optimized online visibility through content marketing, social media campaigns, and digital advertising initiatives.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-entry">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2024</span>
-                        <h3>Speaker - IN-DEPTH WEBSITE TRAINING</h3>
-                        <p class="timeline-org">Universitas Sultan Ageng Tirtayasa</p>
-                        <p>Delivered comprehensive web development training focusing on HTML, CSS, and UI/UX best practices to university students and aspiring developers.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-entry">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2024</span>
-                        <h3>Bootcamp Instructor - HTML & CSS</h3>
-                        <p class="timeline-org">Project Master ID</p>
-                        <p>Conducted intensive front-end development training sessions for beginners, covering fundamental web technologies and modern development practices.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-entry">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">2023</span>
-                        <h3>International Conference Presenter</h3>
-                        <p class="timeline-org">STIKI Malang International Proceedings</p>
-                        <p>Presented research paper titled "Data Protection Strategy and Management Information Systems: Risk Analysis and Implementation" at an international academic conference.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section - Project Archive -->
-    <section id="projects" class="project-archive">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">PROJECT ARCHIVE</span>
-                <h2 class="section-title">Mission Portfolio</h2>
-            </div>
+    <!-- =======================================================================
+         SECTION 09 — SOLVIA NOVA
+         ======================================================================= -->
+    <section id="solvia-nova" class="section-wrapper darker-bg">
+      <div class="container">
+        <div class="solvia-nova-container">
+          <div class="solvia-nova-grid">
             
-            <div class="archive-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="web">Web Development</button>
-                <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
-                <button class="filter-btn" data-filter="marketing">Digital Marketing</button>
+            <!-- Left Narrative -->
+            <div>
+              <div class="solvia-meta-tag">
+                <span>09 // VENTURE INITIATIVE.</span>
+              </div>
+              
+              <h2 class="solvia-headline">
+                BUILDING BEYOND MYSELF.
+              </h2>
+
+              <p class="solvia-desc">
+                Solvia Nova is my independent digital solutions studio—a venture dedicated to understanding core business challenges and engineering dependable digital products with real practical utility.
+              </p>
+
+              <div class="solvia-pillars-list">
+                <div class="pillar-item">
+                  <span class="pillar-bullet"></span>
+                  <p><strong>Custom Software Architecture:</strong> Engineering bespoke web platforms, databases, and APIs tailored specifically to operational workflows.</p>
+                </div>
+                <div class="pillar-item">
+                  <span class="pillar-bullet"></span>
+                  <p><strong>Digital Product Prototyping:</strong> Rapidly transforming conceptual visions into interactive, production-ready software prototypes.</p>
+                </div>
+                <div class="pillar-item">
+                  <span class="pillar-bullet"></span>
+                  <p><strong>Creative Automation &amp; IoT:</strong> Blending physical microcontroller hardware, sensor telemetry, and digital dashboards for operational efficiency.</p>
+                </div>
+              </div>
+
+              <div>
+                <a href="#contact" class="btn btn-primary">
+                  <span>Collaborate with Solvia Nova</span>
+                  <span class="icon-arrow">↗</span>
+                </a>
+              </div>
             </div>
-            
-            <div class="archive-grid">
-                <!-- Web Development Projects -->
-                <div class="project-module" data-category="web">
-                    <div class="project-preview">
-                        <img src="./raport.jpg" alt="E-Raport SMK" loading="lazy">
-                        <div class="project-info">
-                            <h3>E-Raport SMK</h3>
-                            <p>A digital academic reporting platform improving grade transparency between schools, teachers, students, and parents.</p>
-                            <div class="project-tags">
-                                <span>PHP</span>
-                                <span>Laravel</span>
-                                <span>MySQL</span>
-                            </div>
-                        </div>
-                    </div>
+
+            <!-- Right Status Panel -->
+            <div class="solvia-stats-panel">
+              <div class="solvia-panel-header">
+                <span>VENTURE OVERVIEW // 2026</span>
+              </div>
+
+              <div class="solvia-metric-box">
+                <div class="metric-label">Founder &amp; Lead Builder</div>
+                <div class="metric-value" style="color: var(--text-primary); font-size: 1.15rem;">Nanda Ari Wahyu Widagdo</div>
+              </div>
+
+              <div class="solvia-metric-box">
+                <div class="metric-label">Operational Philosophy</div>
+                <div class="metric-value" style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">
+                  Understand the problem deeply, engineer solid architecture, deliver verifiable human impact.
                 </div>
-                
-                <div class="project-module" data-category="web">
-                    <div class="project-preview">
-                        <img src="./classroom.jpg" alt="Google Classroom System" loading="lazy">
-                        <div class="project-info">
-                            <h3>Simple Google Classroom System</h3>
-                            <p>A simplified learning management system enabling assignment distribution and student–teacher interaction.</p>
-                            <div class="project-tags">
-                                <span>Laravel Blade</span>
-                                <span>Laravel</span>
-                                <span>MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-module" data-category="web">
-                    <div class="project-preview">
-                        <img src="./pos.jpg" alt="POS System" loading="lazy">
-                        <div class="project-info">
-                            <h3>POS System for Soto Restaurant</h3>
-                            <p>A custom Point of Sale system for food businesses with transaction processing and sales reporting.</p>
-                            <div class="project-tags">
-                                <span>PHP</span>
-                                <span>MySQL</span>
-                                <span>Bootstrap</span>
-                                <span>JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-module" data-category="web">
-                    <div class="project-preview">
-                        <img src="./katalogpapanreklame.jpg" alt="Billboard Catalog" loading="lazy">
-                        <div class="project-info">
-                            <h3>Billboard Ordering Catalog System</h3>
-                            <p>A digital platform for browsing, customizing, and ordering billboard advertisements.</p>
-                            <div class="project-tags">
-                                <span>Laravel</span>
-                                <span>MySQL</span>
-                                <span>Bootstrap</span>
-                                <span>jQuery</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-module" data-category="web">
-                    <div class="project-preview">
-                        <img src="./ecommerce.jpg" alt="E-Commerce Platform" loading="lazy">
-                        <div class="project-info">
-                            <h3>E-Commerce Platform</h3>
-                            <p>A full-featured e-commerce system with inventory management and analytics dashboards.</p>
-                            <div class="project-tags">
-                                <span>Laravel</span>
-                                <span>Vue.js</span>
-                                <span>MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- UI/UX Design Projects -->
-                <div class="project-module" data-category="uiux">
-                    <div class="project-preview">
-                        <img src="./designUIUX.jpg" alt="UI/UX Interface Design" loading="lazy">
-                        <div class="project-info">
-                            <h3>UI/UX Interface Design</h3>
-                            <p>Interface and experience design focused on usability, clarity, and modern standards.</p>
-                            <div class="project-tags">
-                                <span>Figma</span>
-                                <span>Prototyping</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-module" data-category="uiux">
-                    <div class="project-preview">
-                        <img src="./ecommerce.jpg" alt="E-Commerce UI/UX" loading="lazy">
-                        <div class="project-info">
-                            <h3>E-Commerce Platform UI/UX Design</h3>
-                            <p>User-centered design optimized for conversion flow and customer journey.</p>
-                            <div class="project-tags">
-                                <span>Figma</span>
-                                <span>User Research</span>
-                                <span>Wireframing</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-module" data-category="uiux">
-                    <div class="project-preview">
-                        <img src="./mobileapp.jpg" alt="Mobile App UI" loading="lazy">
-                        <div class="project-info">
-                            <h3>Mobile App UI Design</h3>
-                            <p>Mobile application UI using modern, user-centered design principles.</p>
-                            <div class="project-tags">
-                                <span>Figma</span>
-                                <span>Mobile Design</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-module" data-category="uiux">
-                    <div class="project-preview">
-                        <img src="./dashboardadmin.jpg" alt="Dashboard Design" loading="lazy">
-                        <div class="project-info">
-                            <h3>Dashboard & Admin Panel Design</h3>
-                            <p>Admin dashboard with effective data visualization and intuitive navigation.</p>
-                            <div class="project-tags">
-                                <span>Figma</span>
-                                <span>Data Visualization</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Digital Marketing Projects -->
-                <div class="project-module" data-category="marketing">
-                    <div class="project-preview">
-                        <img src="./best.jpg" alt="Logo Design" loading="lazy">
-                        <div class="project-info">
-                            <h3>Logo Design – Best Tea Karanganyar</h3>
-                            <p>Brand identity and logo design with a modern and memorable concept.</p>
-                            <div class="project-tags">
-                                <span>Figma</span>
-                                <span>Adobe Illustrator</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-module" data-category="marketing">
-                    <div class="project-preview">
-                        <img src="./videopembelajaran.jpg" alt="Educational Video" loading="lazy">
-                        <div class="project-info">
-                            <h3>Interactive Educational Video</h3>
-                            <p>Educational video content enhanced with motion graphics.</p>
-                            <div class="project-tags">
-                                <span>After Effects</span>
-                                <span>CapCut</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-module" data-category="marketing">
-                    <div class="project-preview">
-                        <img src="./videotipography.jpg" alt="Typography Video" loading="lazy">
-                        <div class="project-info">
-                            <h3>Typography & Motion Graphics Video</h3>
-                            <p>Typography-based motion graphics for promotional content.</p>
-                            <div class="project-tags">
-                                <span>After Effects</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-module" data-category="marketing">
-                    <div class="project-preview">
-                        <img src="./kontenkreator.jpg" alt="Content Creation" loading="lazy">
-                        <div class="project-info">
-                            <h3>Content Creation & Editing</h3>
-                            <p>Visual content creation optimized for engagement and branding.</p>
-                            <div class="project-tags">
-                                <span>Photoshop</span>
-                                <span>Canva</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-module" data-category="marketing">
-                    <div class="project-preview">
-                        <img src="./mediamanagement.jpg" alt="Social Media" loading="lazy">
-                        <div class="project-info">
-                            <h3>Social Media Management</h3>
-                            <p>Social media planning and management to increase brand awareness.</p>
-                            <div class="project-tags">
-                                <span>Instagram</span>
-                                <span>Facebook</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-module" data-category="marketing">
-                    <div class="project-preview">
-                        <img src="./seo.jpg" alt="SEO Analytics" loading="lazy">
-                        <div class="project-info">
-                            <h3>SEO & Digital Analytics</h3>
-                            <p>SEO optimization and performance analysis for traffic and conversion growth.</p>
-                            <div class="project-tags">
-                                <span>Google Analytics</span>
-                                <span>SEO</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
+
+              <div class="solvia-metric-box">
+                <div class="metric-label">Venture Status</div>
+                <div class="metric-value">Active &bull; Open for Inquiries</div>
+              </div>
             </div>
+
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Contact Section - Open Communication Channel -->
-    <section id="contact" class="communication-channel">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">OPEN COMMUNICATION CHANNEL</span>
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="section-subtitle">Ready to launch your next digital mission? Let's connect.</p>
+    <!-- =======================================================================
+         SECTION 10 — CONTACT
+         ======================================================================= -->
+    <section id="contact" class="section-wrapper">
+      <div class="container">
+        
+        <div class="section-meta-header">
+          <div class="section-badge lime">10 // LET'S CONNECT.</div>
+        </div>
+
+        <div class="contact-layout-split">
+          
+          <!-- High-impact blue-purple gradient CTA panel -->
+          <div class="contact-gradient-cta-panel">
+            <div>
+              <div class="cta-lime-mini-label">DIRECT COLLABORATION</div>
+              <h2 class="cta-display-headline">
+                LET'S MAKE<br>
+                IT REAL.
+                <span class="cta-large-arrow">↗</span>
+              </h2>
+
+              <p class="cta-description">
+                Open for full-time engineering opportunities, freelance software contracts, business collaborations, and creative technology explorations.
+              </p>
             </div>
+
+            <div>
+              <a href="mailto:nandaariwahyu07@gmail.com" class="btn btn-lime">
+                <span>Start a Conversation</span>
+                <span class="icon-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Beside CTA: Compact contact rows & Quick transmission form -->
+          <div class="contact-actions-column">
             
-            <div class="contact-layout">
-                <div class="contact-channels">
-                    <a href="mailto:nandaariwahyu07@gmail.com" class="channel-card">
-                        <div class="channel-icon">📧</div>
-                        <h3>Email</h3>
-                        <p>nandaariwahyu07@gmail.com</p>
-                    </a>
-                    <a href="https://www.instagram.com/nannd1707/" target="_blank" class="channel-card">
-                        <div class="channel-icon">📷</div>
-                        <h3>Instagram</h3>
-                        <p>@nannd1707</p>
-                    </a>
-                    <a href="https://www.linkedin.com/in/nanda-ari-wahyu-862a033b" target="_blank" class="channel-card">
-                        <div class="channel-icon">💼</div>
-                        <h3>LinkedIn</h3>
-                        <p>Nanda Ari Wahyu</p>
-                    </a>
+            <!-- Email Row -->
+            <a href="mailto:nandaariwahyu07@gmail.com" class="contact-row-card">
+              <div class="contact-row-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                </svg>
+              </div>
+              <div class="contact-row-info">
+                <div class="label">Email Address</div>
+                <div class="val">nandaariwahyu07@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- WhatsApp Row -->
+            <a href="https://wa.me/6285741859067" target="_blank" rel="noopener noreferrer" class="contact-row-card">
+              <div class="contact-row-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12.031 0C5.397 0 .018 5.378.018 12.013c0 2.122.554 4.195 1.608 6.02L0 24l6.168-1.618a12.003 12.003 0 0 0 5.863 1.517h.005c6.633 0 12.012-5.38 12.012-12.014 0-3.208-1.25-6.222-3.518-8.49A11.936 11.936 0 0 0 12.031 0zm-.006 21.986h-.004a9.99 9.99 0 0 1-5.097-1.393l-.365-.217-3.784.992 1.01-3.687-.238-.378a9.986 9.986 0 0 1-1.536-5.29c0-5.519 4.49-10.01 10.018-10.01 2.673 0 5.187 1.042 7.078 2.934 1.89 1.892 2.932 4.406 2.932 7.08 0 5.52-4.49 10.011-10.014 10.011z"/>
+                </svg>
+              </div>
+              <div class="contact-row-info">
+                <div class="label">WhatsApp Direct</div>
+                <div class="val">+62 857-4185-9067</div>
+              </div>
+            </a>
+
+            <!-- LinkedIn Row -->
+            <a href="https://www.linkedin.com/in/nanda-ari-wahyu-862a033b" target="_blank" rel="noopener noreferrer" class="contact-row-card">
+              <div class="contact-row-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </div>
+              <div class="contact-row-info">
+                <div class="label">LinkedIn Network</div>
+                <div class="val">Nanda Ari Wahyu</div>
+              </div>
+            </a>
+
+            <!-- Quick Form -->
+            <div class="contact-quick-form">
+              <form id="contactForm">
+                <div class="form-group-item">
+                  <label for="contactName">Your Name</label>
+                  <input type="text" id="contactName" class="form-control-input" placeholder="e.g. Alex Morgan" required>
                 </div>
-                
-                <form class="transmission-form" id="contactForm">
-                    <div class="form-field">
-                        <input type="text" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-field">
-                        <input type="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-field">
-                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="cta-btn primary">Send Transmission</button>
-                </form>
+                <div class="form-group-item">
+                  <label for="contactEmail">Your Email</label>
+                  <input type="email" id="contactEmail" class="form-control-input" placeholder="alex@company.com" required>
+                </div>
+                <div class="form-group-item">
+                  <label for="contactMessage">Project Scope or Inquiry</label>
+                  <textarea id="contactMessage" class="form-control-textarea" placeholder="Tell me about your project, idea, or system requirements..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm" style="width: 100%;">
+                  <span>Send Message via WhatsApp</span>
+                  <span class="icon-arrow">↗</span>
+                </button>
+                <div id="formFeedback" class="form-status-feedback" role="alert"></div>
+              </form>
             </div>
+
+          </div>
+
         </div>
+
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="mission-footer">
-        <div class="container">
-            <p>&copy; 2025 Nanda Ari Wahyu Widagdo</p>
-            <p class="footer-note">Mission-driven digital professional</p>
+  <!-- =========================================================================
+       SECTION 11 — FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-row">
+        <div class="footer-brand-summary">
+          <div class="nav-brand-wrap" style="margin-bottom: 0.5rem;">
+            <span class="nav-n-monogram" style="width: 28px; height: 28px; font-size: 0.95rem;">N</span>
+            <span class="nav-brand-text" style="font-size: 1.25rem;">NANDA<span class="dot">.</span></span>
+          </div>
+          <p>Digital Solutions Developer &bull; Building Ideas into Systems</p>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <nav class="footer-links-nav" aria-label="Footer Links">
+          <a href="#home" class="footer-link">Home</a>
+          <a href="#work" class="footer-link">Work</a>
+          <a href="#research" class="footer-link">Research</a>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#journey" class="footer-link">Journey</a>
+          <a href="#solvia-nova" class="footer-link">Solvia Nova</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p>&copy; <span id="currentYear">2026</span> Nanda Ari Wahyu Widagdo. All rights reserved.</p>
+        <span class="footer-closing-phrase">Designed with curiosity. Engineered with precision.</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       IN-PAGE INTERACTIVE CASE STUDY MODAL DIALOG
+       ========================================================================= -->
+  <div id="caseStudyModal" class="case-study-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="case-study-modal-dialog">
+      <div class="case-study-modal-header">
+        <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--electric-blue); font-weight: 700;">
+          CASE STUDY VIEWER // 02
+        </span>
+        <button id="closeCaseStudyModal" class="case-study-close-btn" aria-label="Close Case Study">
+          &times;
+        </button>
+      </div>
+      <div class="case-study-modal-body" id="modalCaseStudyContent">
+        <!-- Content dynamically injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript Engine -->
+  <script src="script.js"></script>
 </body>
 </html>

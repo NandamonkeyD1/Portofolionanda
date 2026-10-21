@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#07090d" />
+    </linearGradient>
+    <linearGradient id="cobaltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2457FF" />
+      <stop offset="100%" stop-color="#7957FF" />
+    </linearGradient>
+    <linearGradient id="limeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFFF4F" />
+      <stop offset="100%" stop-color="#8ce000" />
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="glowCobalt" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glowLime" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="techGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.5" fill="rgba(36,87,255,0.3)"/>
+    </pattern>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <rect width="800" height="500" fill="url(#techGrid)"/>
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="400" cy="230" r="180" fill="rgba(36,87,255,0.12)" filter="url(#glowCobalt)" />
+  <circle cx="620" cy="180" r="120" fill="rgba(121,87,255,0.08)" />
+  <circle cx="160" cy="340" r="100" fill="rgba(223,255,79,0.05)" />
+
+  <!-- Outer HUD Frame -->
+  <rect x="25" y="25" width="750" height="450" rx="14" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  
+  <!-- Corner Tech Accents -->
+  <path d="M 25 50 L 25 25 L 50 25" fill="none" stroke="#2457FF" stroke-width="2.5"/>
+  <path d="M 775 50 L 775 25 L 750 25" fill="none" stroke="#2457FF" stroke-width="2.5"/>
+  <path d="M 25 450 L 25 475 L 50 475" fill="none" stroke="#2457FF" stroke-width="2.5"/>
+  <path d="M 775 450 L 775 475 L 750 475" fill="none" stroke="#DFFF4F" stroke-width="2.5"/>
+
+  <!-- Top Header Bar -->
+  <text x="50" y="58" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#2457FF" letter-spacing="2">SYS.ARCH // ELFAN COMMAND ENGINE v1.4</text>
+  <text x="750" y="58" text-anchor="end" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="10" font-weight="600" fill="#DFFF4F" letter-spacing="1.5">● STATUS: OPERATIONAL</text>
+
+  <!-- ================= MODULE 1: SENSORS & ACTUATORS (LEFT) ================= -->
+  <g transform="translate(60, 100)">
+    <rect width="180" height="320" rx="10" fill="rgba(16, 20, 31, 0.75)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <rect width="180" height="32" rx="10" fill="rgba(36, 87, 255, 0.15)"/>
+    <text x="14" y="21" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#F5F7FA" letter-spacing="1">01 / EDGE HARDWARE</text>
+    
+    <!-- Sensor Card 1: ESP32 Module -->
+    <rect x="14" y="46" width="152" height="68" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(223, 255, 79, 0.3)" stroke-width="1"/>
+    <text x="24" y="66" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#DFFF4F">ESP32 Dev Module</text>
+    <text x="24" y="82" font-family="Inter, sans-serif" font-size="9" fill="#A7ADBB">Dual Core 240MHz</text>
+    <text x="24" y="98" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#2457FF">WiFi + Bluetooth 4.2</text>
+    <circle cx="152" cy="62" r="3.5" fill="#DFFF4F" filter="url(#glowLime)"/>
+
+    <!-- Sensor Card 2: Environment Sensors -->
+    <rect x="14" y="124" width="152" height="68" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="24" y="144" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#F5F7FA">Sensor Array</text>
+    <text x="24" y="160" font-family="Inter, sans-serif" font-size="9" fill="#A7ADBB">Temp, Humidity (DHT)</text>
+    <text x="24" y="176" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#A7ADBB">Analog Voltage ADC</text>
+
+    <!-- Sensor Card 3: Relay & Actuators -->
+    <rect x="14" y="202" width="152" height="68" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="24" y="222" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#F5F7FA">Relay Switching Hub</text>
+    <text x="24" y="238" font-family="Inter, sans-serif" font-size="9" fill="#A7ADBB">4-Channel Opto-Isolated</text>
+    <text x="24" y="254" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#7957FF">GPIO Trigger Logic</text>
+
+    <!-- Edge Tag -->
+    <rect x="14" y="280" width="152" height="24" rx="4" fill="rgba(36,87,255,0.1)"/>
+    <text x="90" y="295" text-anchor="middle" font-family="Inter, sans-serif" font-size="8.5" font-weight="600" fill="#F5F7FA">Verified Hardware Setup</text>
+  </g>
+
+  <!-- ================= MODULE 2: CORE PIPELINE & GATEWAY (CENTER) ================= -->
+  <g transform="translate(310, 85)">
+    <rect width="190" height="350" rx="12" fill="rgba(16, 20, 31, 0.9)" stroke="#2457FF" stroke-width="1.5" filter="url(#glowCobalt)"/>
+    <rect width="190" height="350" rx="12" fill="rgba(16, 20, 31, 0.95)" stroke="rgba(36,87,255,0.5)" stroke-width="1"/>
+    
+    <!-- Header -->
+    <rect width="190" height="38" rx="12" fill="url(#cobaltGrad)"/>
+    <text x="95" y="24" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" letter-spacing="1">02 / CORE GATEWAY</text>
+
+    <!-- Raspberry Pi / Node Core -->
+    <g transform="translate(18, 52)">
+      <rect width="154" height="74" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <text x="14" y="22" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#F5F7FA">Raspberry Pi Host</text>
+      <text x="14" y="38" font-family="Inter, sans-serif" font-size="9" fill="#A7ADBB">Linux Daemon Engine</text>
+      <text x="14" y="54" font-family="'Space Grotesk', monospace" font-size="9" fill="#DFFF4F">Node.js Runtime</text>
+      <circle cx="140" cy="20" r="3" fill="#2457FF"/>
+    </g>
+
+    <!-- Broker Module -->
+    <g transform="translate(18, 136)">
+      <rect width="154" height="66" rx="8" fill="rgba(36,87,255,0.08)" stroke="rgba(36,87,255,0.4)" stroke-width="1"/>
+      <text x="14" y="20" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#2457FF">MQTT Broker</text>
+      <text x="14" y="36" font-family="Inter, sans-serif" font-size="9" fill="#A7ADBB">Pub/Sub Telemetry</text>
+      <text x="14" y="52" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#F5F7FA">Port 1883 / QoS 1</text>
+    </g>
+
+    <!-- Logic Engine -->
+    <g transform="translate(18, 212)">
+      <rect width="154" height="66" rx="8" fill="rgba(121,87,255,0.08)" stroke="rgba(121,87,255,0.3)" stroke-width="1"/>
+      <text x="14" y="20" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#7957FF">Rule Dispatcher</text>
+      <text x="14" y="36" font-family="Inter, sans-serif" font-size="9" fill="#A7ADBB">State Machine Evaluator</text>
+      <text x="14" y="52" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#A7ADBB">Auto-cutoff & Thresholds</text>
+    </g>
+
+    <!-- Status Strip -->
+    <rect x="18" y="290" width="154" height="26" rx="5" fill="rgba(223, 255, 79, 0.1)" stroke="rgba(223, 255, 79, 0.3)" stroke-width="1"/>
+    <circle cx="28" cy="303" r="3" fill="#DFFF4F"/>
+    <text x="38" y="306" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="700" fill="#DFFF4F">ENGINE ACTIVE // 0 ERR</text>
+  </g>
+
+  <!-- ================= MODULE 3: CLIENT & DASHBOARD (RIGHT) ================= -->
+  <g transform="translate(560, 100)">
+    <rect width="180" height="320" rx="10" fill="rgba(16, 20, 31, 0.75)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <rect width="180" height="32" rx="10" fill="rgba(121, 87, 255, 0.15)"/>
+    <text x="14" y="21" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#F5F7FA" letter-spacing="1">03 / CONTROL INTERFACE</text>
+
+    <!-- UI Component 1: Real-time Dashboard -->
+    <rect x="14" y="46" width="152" height="74" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="24" y="66" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#F5F7FA">Web Telemetry UI</text>
+    <text x="24" y="82" font-family="Inter, sans-serif" font-size="9" fill="#A7ADBB">WebSocket Realtime Stream</text>
+    <text x="24" y="98" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#2457FF">&lt; 35ms Latency</text>
+
+    <!-- UI Component 2: Device Control -->
+    <rect x="14" y="130" width="152" height="74" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="24" y="150" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#F5F7FA">Manual Switcher</text>
+    <text x="24" y="166" font-family="Inter, sans-serif" font-size="9" fill="#A7ADBB">Instant Relay Override</text>
+    <text x="24" y="182" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#7957FF">REST API Trigger</text>
+
+    <!-- UI Component 3: Experimental Lab -->
+    <rect x="14" y="214" width="152" height="74" rx="6" fill="rgba(255,255,255,0.02)" stroke="dashed rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="24" y="234" font-family="'Space Grotesk', sans-serif" font-size="10.5" font-weight="700" fill="#A7ADBB">[LAB] Cloud Mesh Sync</text>
+    <text x="24" y="250" font-family="Inter, sans-serif" font-size="8.5" fill="#707684">Multi-node synchronization</text>
+    <text x="24" y="266" font-family="'Space Grotesk', monospace" font-size="8" fill="#DFFF4F">PHASE: PROTOTYPE</text>
+
+    <!-- Lab Tag -->
+    <rect x="14" y="294" width="152" height="18" rx="3" fill="rgba(255,255,255,0.05)"/>
+    <text x="90" y="306" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#A7ADBB">Experimental Pipeline</text>
+  </g>
+
+  <!-- ================= CONNECTION WIRES & DATA BUS ================= -->
+  <!-- Line 1: Edge to Gateway -->
+  <path d="M 240 180 L 310 180" fill="none" stroke="#2457FF" stroke-width="2" stroke-dasharray="4,4"/>
+  <circle cx="275" cy="180" r="3.5" fill="#2457FF" filter="url(#glowCobalt)"/>
+  <text x="275" y="170" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" fill="#2457FF">UART/WIFI</text>
+
+  <path d="M 240 280 L 310 280" fill="none" stroke="#DFFF4F" stroke-width="2"/>
+  <circle cx="275" cy="280" r="3" fill="#DFFF4F" filter="url(#glowLime)"/>
+  <text x="275" y="272" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" fill="#DFFF4F">MQTT</text>
+
+  <!-- Line 2: Gateway to Interface -->
+  <path d="M 500 200 L 560 200" fill="none" stroke="#7957FF" stroke-width="2" stroke-dasharray="4,4"/>
+  <circle cx="530" cy="200" r="3.5" fill="#7957FF"/>
+  <text x="530" y="190" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" fill="#7957FF">WS / JSON</text>
+
+  <path d="M 500 290 L 560 290" fill="none" stroke="#2457FF" stroke-width="2"/>
+  <circle cx="530" cy="290" r="3" fill="#2457FF"/>
+  <text x="530" y="282" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" fill="#2457FF">REST API</text>
+
+  <!-- Bottom Legend -->
+  <g transform="translate(50, 448)">
+    <circle cx="10" cy="8" r="4" fill="#2457FF"/>
+    <text x="22" y="11" font-family="Inter, sans-serif" font-size="9" fill="#A7ADBB">Verified Telemetry Layer</text>
+
+    <circle cx="190" cy="8" r="4" fill="#DFFF4F"/>
+    <text x="202" y="11" font-family="Inter, sans-serif" font-size="9" fill="#A7ADBB">Active MQTT Command Loop</text>
+
+    <circle cx="390" cy="8" r="4" fill="none" stroke="#A7ADBB" stroke-dasharray="2,2"/>
+    <text x="402" y="11" font-family="Inter, sans-serif" font-size="9" fill="#707684">Experimental Cloud Features</text>
+
+    <text x="700" y="11" text-anchor="end" font-family="'Space Grotesk', monospace" font-size="9" fill="#2457FF">ELFAN CORE ARCHITECTURE</text>
+  </g>
+</svg>

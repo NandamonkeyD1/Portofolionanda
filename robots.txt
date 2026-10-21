@@ -1,0 +1,6 @@
+# Robots.txt for Nanda Ari Wahyu Widagdo Portfolio
+User-agent: *
+Allow: /
+
+# Direct Sitemap Link for Search Engines
+Sitemap: https://portofolionanda-mu.vercel.app/sitemap.xml

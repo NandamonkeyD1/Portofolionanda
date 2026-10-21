@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Raport Management System — Case Study | Nanda Ari Wahyu Widagdo</title>
+  <meta name="description" content="Case study: E-Raport Management System by Nanda Ari Wahyu Widagdo. Official national registered copyright (PDKI 2025). Integrated academic evaluation and grade reporting web system built with Laravel & MySQL.">
+  <link rel="canonical" href="https://portofolionanda-mu.vercel.app/projects/eraport.html">
+  <meta name="author" content="Nanda Ari Wahyu Widagdo">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .case-hero {
+      padding-top: calc(var(--nav-height) + 3rem);
+      padding-bottom: 3rem;
+    }
+    .case-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--accent-lime);
+      margin-bottom: 2rem;
+      transition: transform var(--transition-fast);
+    }
+    .case-back-link:hover {
+      transform: translateX(-4px);
+    }
+    .case-detail-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3.5rem;
+      margin-top: 3rem;
+    }
+    .case-meta-sidebar {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2rem;
+      height: fit-content;
+    }
+    .case-meta-item {
+      margin-bottom: 1.5rem;
+    }
+    .case-meta-item:last-child {
+      margin-bottom: 0;
+    }
+    .case-meta-label {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.35rem;
+    }
+    .case-meta-val {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .case-content-body section {
+      margin-bottom: 3.5rem;
+    }
+    .case-content-body h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .case-content-body h2 .sec-id {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--accent-cobalt);
+    }
+    .case-img-showcase {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      margin-block: 1.5rem;
+    }
+    .case-nav-pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 3rem;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 4rem;
+    }
+    @media (max-width: 900px) {
+      .case-detail-grid {
+        grid-template-columns: 1fr;
+      }
+      .case-meta-sidebar {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Ambient & Grid Background -->
+  <div class="bg-ambient"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Minimal Nav -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-brand">NANDA<span class="dot">.</span></a>
+      <div class="nav-cta-wrapper">
+        <a href="../index.html#work" class="btn btn-secondary btn-sm">← Back to Portfolio</a>
+        <a href="../index.html#contact" class="btn btn-lime btn-sm">Let's Talk ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="case-hero">
+      <div class="container">
+        <a href="../index.html#work" class="case-back-link">← 02 // SELECTED WORKS</a>
+        <div class="section-badge">Case Study 01 // Education Technology</div>
+        <h1 class="section-title-large" style="margin-bottom: 0.75rem;">E-Raport Management System</h1>
+        <p class="section-lead">An integrated academic governance and digital grading platform engineered for transparent evaluation between schools, educators, students, and parents.</p>
+
+        <div class="case-img-showcase" style="margin-top: 2.5rem;">
+          <img src="../raport.jpg" alt="E-Raport Management System Interface" style="width: 100%; max-height: 540px; object-fit: cover;">
+        </div>
+
+        <div class="case-detail-grid">
+          <!-- Main Case Study Content (10 Reusable Sections) -->
+          <div class="case-content-body">
+            
+            <!-- 1. Overview -->
+            <section id="overview">
+              <h2><span class="sec-id">01 /</span> Project Overview</h2>
+              <p>E-Raport Management System is a specialized web application engineered to modernize student grading workflows across vocational high schools (SMK). It connects subject teachers, homeroom advisors, curriculum coordinators, and students within a unified portal for recording daily tasks, midterm exams, and automated final report card generation.</p>
+            </section>
+
+            <!-- 2. Problem & Motivation -->
+            <section id="problem">
+              <h2><span class="sec-id">02 /</span> Problem & Motivation</h2>
+              <p>Prior to system implementation, grade recording was executed manually through disconnected spreadsheets by individual teachers. This caused frequent weighted formula calculation errors, severe delays during semester card printing, and prevented parents from accessing timely visibility into academic progress.</p>
+            </section>
+
+            <!-- 3. My Role & Contributions -->
+            <section id="role">
+              <h2><span class="sec-id">03 /</span> My Role & Contributions</h2>
+              <p>As the Full-Stack Developer on this project, my core responsibilities included:</p>
+              <ul style="margin-left: 1.5rem; margin-top: 0.75rem; color: var(--text-secondary); line-height: 1.8;">
+                <li>Architecting the normalized relational MySQL database schema for students, classrooms, courses, and grading criteria.</li>
+                <li>Developing backend business logic in PHP Laravel for score validation and automated weighted average calculations.</li>
+                <li>Implementing Role-Based Access Control (RBAC) across 4 user tiers: School Administrators, Subject Teachers, Homeroom Advisors, and Students.</li>
+                <li>Designing an efficient batch score-entry interface and building automated PDF report card exports in compliance with institutional standards.</li>
+              </ul>
+            </section>
+
+            <!-- 4. Technical Stack -->
+            <section id="tech-stack">
+              <h2><span class="sec-id">04 /</span> Technical Stack</h2>
+              <div class="project-tech-tags" style="margin-top: 1rem;">
+                <span class="tech-tag-chip">PHP</span>
+                <span class="tech-tag-chip">Laravel Framework</span>
+                <span class="tech-tag-chip">MySQL Relational DB</span>
+                <span class="tech-tag-chip">Blade Templating</span>
+                <span class="tech-tag-chip">Bootstrap CSS</span>
+                <span class="tech-tag-chip">JavaScript (ES6)</span>
+                <span class="tech-tag-chip">DomPDF Exporter</span>
+              </div>
+            </section>
+
+            <!-- 5. Architecture & Design Decisions -->
+            <section id="architecture">
+              <h2><span class="sec-id">05 /</span> Design & Architecture Decisions</h2>
+              <p>We implemented an MVC pattern complemented by a Service Layer to isolate calculation algorithms from controllers. Database indexing on foreign keys (<code>student_id</code>, <code>course_id</code>) was tuned to ensure multi-semester analytical queries execute in sub-100ms.</p>
+            </section>
+
+            <!-- 6. Implementation Evidence -->
+            <section id="evidence">
+              <h2><span class="sec-id">06 /</span> Screenshots & Implementation Evidence</h2>
+              <p>The interface provides role-scoped sidebars, batch score inputs with client-side bounds checking (0–100), and on-screen report card rendering before export.</p>
+              <div class="case-img-showcase">
+                <img src="../raport.jpg" alt="E-Raport Screen Capture" style="width: 100%;">
+              </div>
+            </section>
+
+            <!-- 7. Challenges & Lessons -->
+            <section id="challenges">
+              <h2><span class="sec-id">07 /</span> Challenges & Lessons Learned</h2>
+              <p>The primary challenge stemmed from varying weight allocations across curricula (Kurikulum 2013 vs. Kurikulum Merdeka). We resolved this by building a dynamic rule configuration table, enabling administrators to modify course grading weights on the fly without changing source code.</p>
+            </section>
+
+            <!-- 8. Outcome & Status -->
+            <section id="outcome">
+              <h2><span class="sec-id">08 /</span> Outcome & Project Status</h2>
+              <p>The system was successfully deployed for live academic evaluation. Grade compilation time—which previously took weeks of manual reconciliation—was compressed to just a few hours after teacher submissions completed.</p>
+            </section>
+
+            <!-- 9. Links & Artifacts -->
+            <section id="links">
+              <h2><span class="sec-id">09 /</span> Links & Verified Artifacts</h2>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                <a href="../CV Webdeveloper And Digital Marketing.pdf" target="_blank" class="btn btn-secondary btn-sm">Verified in CV (PDF) ↗</a>
+                <a href="../index.html#contact" class="btn btn-primary btn-sm">Discuss Similar Projects ↗</a>
+              </div>
+            </section>
+
+          </div>
+
+          <!-- Sidebar Meta -->
+          <aside class="case-meta-sidebar">
+            <div class="case-meta-item">
+              <div class="case-meta-label">Category</div>
+              <div class="case-meta-val">Web Application / EdTech</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Role</div>
+              <div class="case-meta-val">Full-Stack Developer</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Core Technologies</div>
+              <div class="case-meta-val">Laravel, MySQL, Blade, JS</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Target Audience</div>
+              <div class="case-meta-val">Vocational High School Staff & Students</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Intellectual Property</div>
+              <div class="case-meta-val" style="color: var(--accent-lime); font-size: 0.85rem;">Registered Copyright (PDKI 2025)</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Current Status</div>
+              <div class="case-meta-val" style="color: var(--accent-lime);">Verified &amp; Completed</div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- 10. Navigation to Next Project -->
+        <div class="case-nav-pagination">
+          <a href="../index.html#work" class="btn btn-secondary">← All Works</a>
+          <a href="pos.html" class="btn btn-lime">Next: Restaurant POS ↗</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container footer-bottom-row">
+      <p>&copy; 2026 Nanda Ari Wahyu Widagdo. All rights reserved.</p>
+      <span class="footer-closing-phrase">Designed with curiosity. Built with purpose.</span>
+    </div>
+  </footer>
+</body>
+</html>
