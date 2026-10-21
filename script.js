@@ -185,17 +185,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('section[id]');
   const mobileToggle = document.querySelector('.mobile-nav-toggle');
   const navMenu = document.querySelector('.nav-links');
+  const scrollProgressBar = document.getElementById('scrollProgressBar');
 
-  // Handle nav background on scroll
-  function handleNavScroll() {
+  // Handle nav background and scroll progress on scroll
+  function updateScrollState() {
+    // 1. Nav background blur
     if (window.scrollY > 40) {
       siteNav?.classList.add('scrolled');
     } else {
       siteNav?.classList.remove('scrolled');
     }
+
+    // 2. Top scroll progress bar
+    if (scrollProgressBar) {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight > 0) {
+        const scrollPercent = (window.scrollY / docHeight) * 100;
+        scrollProgressBar.style.width = `${Math.min(100, Math.max(0, scrollPercent))}%`;
+      }
+    }
   }
-  window.addEventListener('scroll', handleNavScroll, { passive: true });
-  handleNavScroll();
+  window.addEventListener('scroll', updateScrollState, { passive: true });
+  updateScrollState();
 
   // Mobile menu toggle
   if (mobileToggle && navMenu) {
@@ -216,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Active section spy
   const sectionObserverOptions = {
-    threshold: 0.3,
+    threshold: 0.25,
     rootMargin: '-80px 0px -40% 0px'
   };
 
@@ -236,6 +247,105 @@ document.addEventListener('DOMContentLoaded', () => {
   }, sectionObserverOptions);
 
   sections.forEach(sec => sectionObserver.observe(sec));
+
+  // =========================================================================
+  // SCROLL REVEAL OBSERVER (FLUID HARDWARE-ACCELERATED ENTRANCE)
+  // =========================================================================
+  const revealElements = document.querySelectorAll('.reveal-on-scroll, .reveal-from-left, .reveal-from-right');
+  
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => {
+      // Check if already in viewport (e.g. Hero on initial load)
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        el.classList.add('is-revealed');
+      } else {
+        revealObserver.observe(el);
+      }
+    });
+  } else {
+    // Fallback for older browsers
+    revealElements.forEach(el => el.classList.add('is-revealed'));
+  }
+
+  // =========================================================================
+  // STAT NUMBER TICKER ENGINE (SMOOTH EASING COUNTER)
+  // =========================================================================
+  const counterElements = document.querySelectorAll('.counter-value');
+  let animatedCounters = false;
+
+  function runCounterAnimation() {
+    if (animatedCounters) return;
+    animatedCounters = true;
+
+    counterElements.forEach(counter => {
+      const target = parseFloat(counter.getAttribute('data-target') || counter.textContent);
+      const decimals = parseInt(counter.getAttribute('data-decimals') || '0', 10);
+      const suffix = counter.getAttribute('data-suffix') || '';
+      const duration = 1500; // ms
+      let startTime = null;
+
+      function step(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Out-Cubic curve: 1 - (1 - t)^3
+        const easeProgress = 1 - Math.pow(1 - progress, 3);
+        const currentVal = easeProgress * target;
+
+        counter.textContent = currentVal.toFixed(decimals) + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          counter.textContent = target.toFixed(decimals) + suffix;
+        }
+      }
+
+      requestAnimationFrame(step);
+    });
+  }
+
+  const toolkitSection = document.getElementById('toolkit');
+  if (toolkitSection && counterElements.length > 0) {
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          runCounterAnimation();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.25 });
+
+    counterObserver.observe(toolkitSection);
+  }
+
+  // =========================================================================
+  // INTERACTIVE CARD CURSOR SPOTLIGHT TRACKER (MICRO-INTERACTION)
+  // =========================================================================
+  const interactiveCards = document.querySelectorAll('.interactive-card');
+  interactiveCards.forEach(card => {
+    card.addEventListener('pointermove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    }, { passive: true });
+  });
 
   // =========================================================================
   // 3. CASE STUDY MODAL ENGINE

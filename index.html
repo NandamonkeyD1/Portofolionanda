@@ -231,6 +231,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Top Scroll Progress Bar (Fluid Tracking) -->
+  <div class="scroll-progress-track" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
   <!-- Ambient Lighting Panels & Technical Grid -->
   <div class="bg-ambient" aria-hidden="true"></div>
   <div class="bg-grid" aria-hidden="true"></div>
@@ -282,7 +287,7 @@
         <div class="hero-grid">
           
           <!-- Left side: Personal identity, headline, copy, and CTAs -->
-          <div class="hero-content">
+          <div class="hero-content reveal-on-scroll">
             <div class="hero-status-pill">
               <span class="pulse-dot" aria-hidden="true"></span>
               <span>SYS.ID // 01 &bull; AVAILABLE FOR IMPACT</span>
@@ -352,7 +357,7 @@
           </div>
 
           <!-- Center/right side: Large personal portrait with layered lighting panels -->
-          <div class="hero-portrait-stage">
+          <div class="hero-portrait-stage reveal-on-scroll stagger-2">
             <div class="portrait-composition-wrap">
               
               <div class="portrait-glow-aura" aria-hidden="true"></div>
@@ -416,7 +421,7 @@
     <section id="work" class="section-wrapper darker-bg">
       <div class="container">
         
-        <div class="section-meta-header">
+        <div class="section-meta-header reveal-on-scroll">
           <div class="section-badge">02 // SELECTED WORKS</div>
           <h2 class="section-title-large">
             REAL PROJECTS.<br>
@@ -430,7 +435,7 @@
         <div class="works-editorial-grid">
           
           <!-- FEATURED HERO PROJECT: E-Raport (Span 12) -->
-          <article class="project-card featured-hero">
+          <article class="project-card featured-hero reveal-on-scroll interactive-card">
             <div class="project-media-wrap">
               <span class="project-tag-pill">FEATURED &bull; EDTECH</span>
               <img src="./raport.jpg" alt="E-Raport Management System Interface" loading="lazy">
@@ -460,7 +465,7 @@
           </article>
 
           <!-- SECONDARY PROJECT 1: Restaurant POS (Span 6) -->
-          <article class="project-card grid-span-6">
+          <article class="project-card grid-span-6 reveal-on-scroll stagger-1 interactive-card">
             <div class="project-media-wrap">
               <span class="project-tag-pill">BUSINESS SOFTWARE</span>
               <img src="./pos.jpg" alt="Restaurant Point of Sale System" loading="lazy">
@@ -489,7 +494,7 @@
           </article>
 
           <!-- SECONDARY PROJECT 2: ELFAN Command Engine (Span 6) -->
-          <article class="project-card grid-span-6">
+          <article class="project-card grid-span-6 reveal-on-scroll stagger-2 interactive-card">
             <div class="project-media-wrap" style="background: #070A10;">
               <span class="project-tag-pill" style="color: var(--neon-lime); border-color: var(--border-lime);">IOT &amp; EMBEDDED</span>
               <img src="./elfan-architecture.svg" alt="ELFAN Command Engine IoT Architecture" loading="lazy" style="object-fit: contain; padding: 1.25rem;">
@@ -518,7 +523,7 @@
           </article>
 
           <!-- SECONDARY PROJECT 3: E-Commerce Platform (Span 6) -->
-          <article class="project-card grid-span-6">
+          <article class="project-card grid-span-6 reveal-on-scroll stagger-1 interactive-card">
             <div class="project-media-wrap">
               <span class="project-tag-pill">DIGITAL PRODUCT</span>
               <img src="./ecommerce.jpg" alt="E-Commerce Platform Storefront" loading="lazy">
@@ -547,7 +552,7 @@
           </article>
 
           <!-- SECONDARY PROJECT 4: Enterprise Dashboard (Span 6) -->
-          <article class="project-card grid-span-6">
+          <article class="project-card grid-span-6 reveal-on-scroll stagger-2 interactive-card">
             <div class="project-media-wrap">
               <span class="project-tag-pill">UI/UX &amp; ANALYTICS</span>
               <img src="./dashboardadmin.jpg" alt="Enterprise Dashboard Interface Design" loading="lazy">
@@ -586,7 +591,7 @@
     <section id="services" class="section-wrapper">
       <div class="container">
         
-        <div class="section-meta-header">
+        <div class="section-meta-header reveal-on-scroll">
           <div class="section-badge">03 // WHAT I DO</div>
           <h2 class="section-title-large">
             MORE THAN CODE.<br>
@@ -597,7 +602,7 @@
         <div class="services-single-row">
           
           <!-- Card 01 -->
-          <div class="service-card">
+          <div class="service-card reveal-on-scroll stagger-1 interactive-card">
             <div class="service-header-row">
               <div class="service-icon-box">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -614,7 +619,7 @@
           </div>
 
           <!-- Card 02 -->
-          <div class="service-card">
+          <div class="service-card reveal-on-scroll stagger-2 interactive-card">
             <div class="service-header-row">
               <div class="service-icon-box">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -632,7 +637,7 @@
           </div>
 
           <!-- Card 03 -->
-          <div class="service-card">
+          <div class="service-card reveal-on-scroll stagger-3 interactive-card">
             <div class="service-header-row">
               <div class="service-icon-box">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -649,7 +654,7 @@
           </div>
 
           <!-- Card 04 -->
-          <div class="service-card">
+          <div class="service-card reveal-on-scroll stagger-4 interactive-card">
             <div class="service-header-row">
               <div class="service-icon-box">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -676,7 +681,7 @@
     <section id="toolkit" class="section-wrapper darker-bg">
       <div class="container">
         
-        <div class="section-meta-header">
+        <div class="section-meta-header reveal-on-scroll">
           <div class="section-badge">04 // TOOLS I USE.</div>
           <h2 class="section-title-large">
             ENGINEERING STACK.<br>
@@ -687,7 +692,7 @@
         <div class="toolkit-split-layout">
           
           <!-- Area 1: Technology Icon Grid (Clean Vector SVGs) -->
-          <div class="toolkit-icon-grid-panel">
+          <div class="toolkit-icon-grid-panel reveal-on-scroll interactive-card">
             <div class="toolkit-icon-grid">
               
               <!-- Laravel -->
@@ -782,24 +787,24 @@
           </div>
 
           <!-- Area 2: Statistics Panel (Verified metrics) -->
-          <div class="toolkit-stats-panel">
+          <div class="toolkit-stats-panel reveal-on-scroll stagger-2 interactive-card">
             <div class="toolkit-stat-row">
-              <div class="stat-value">3.95</div>
+              <div class="stat-value counter-value" data-target="3.95" data-decimals="2">3.95</div>
               <div class="stat-label">Academic GPA (TRPL Cum Laude)</div>
             </div>
 
             <div class="toolkit-stat-row">
-              <div class="stat-value">2</div>
+              <div class="stat-value counter-value" data-target="2" data-decimals="0">2</div>
               <div class="stat-label">Published Research Papers (IC-ITECHS &amp; SENATIB)</div>
             </div>
 
             <div class="toolkit-stat-row">
-              <div class="stat-value">1</div>
+              <div class="stat-value counter-value" data-target="1" data-decimals="0">1</div>
               <div class="stat-label">Registered Intellectual Property (PDKI HAKI 2025)</div>
             </div>
 
             <div class="toolkit-stat-row">
-              <div class="stat-value">18+</div>
+              <div class="stat-value counter-value" data-target="18" data-decimals="0" data-suffix="+">18+</div>
               <div class="stat-label">Delivered Software Projects &amp; Systems</div>
             </div>
           </div>
@@ -814,7 +819,7 @@
     <section id="impact" class="section-wrapper">
       <div class="container">
         
-        <div class="section-meta-header" style="text-align: center; max-width: 640px; margin-inline: auto;">
+        <div class="section-meta-header reveal-on-scroll" style="text-align: center; max-width: 640px; margin-inline: auto;">
           <div class="section-badge lime">05 // CORE PHILOSOPHY</div>
           <h2 class="section-title-large">
             MORE THAN JUST SYNTAX.<br>
@@ -828,7 +833,7 @@
         <div class="impact-editorial-strip">
           
           <!-- Card 1: Solving Real Problems -->
-          <article class="impact-card">
+          <article class="impact-card reveal-on-scroll stagger-1 interactive-card">
             <div class="impact-card-media">
               <img src="./raport.jpg" alt="Solving Real Problems with Software" loading="lazy">
             </div>
@@ -842,7 +847,7 @@
           </article>
 
           <!-- Card 2: Building Useful Products -->
-          <article class="impact-card">
+          <article class="impact-card reveal-on-scroll stagger-2 interactive-card">
             <div class="impact-card-media">
               <img src="./dashboardadmin.jpg" alt="Building Useful Products" loading="lazy">
             </div>
@@ -856,7 +861,7 @@
           </article>
 
           <!-- Card 3: Exploring New Technologies -->
-          <article class="impact-card">
+          <article class="impact-card reveal-on-scroll stagger-3 interactive-card">
             <div class="impact-card-media" style="background: #070A10;">
               <img src="./elfan-architecture.svg" alt="Exploring New Technologies" loading="lazy" style="object-fit: contain; padding: 1rem;">
             </div>
@@ -879,7 +884,7 @@
     <section id="research" class="section-wrapper darker-bg">
       <div class="container">
         
-        <div class="section-meta-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
+        <div class="section-meta-header reveal-on-scroll" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
           <div>
             <div class="section-badge lime">06 // RESEARCH &amp; PUBLICATIONS</div>
             <h2 class="section-title-large">
@@ -904,7 +909,7 @@
         <div class="research-grid">
           
           <!-- Publication 01: IC-ITECHS 2024 -->
-          <article class="research-card">
+          <article class="research-card reveal-on-scroll stagger-1 interactive-card">
             <div>
               <div class="research-card-header">
                 <span class="research-type-badge">INTERNATIONAL JOURNAL // IC-ITECHS</span>
@@ -942,7 +947,7 @@
           </article>
 
           <!-- Publication 02: SENATIB 2024 -->
-          <article class="research-card">
+          <article class="research-card reveal-on-scroll stagger-2 interactive-card">
             <div>
               <div class="research-card-header">
                 <span class="research-type-badge">CONFERENCE PROCEEDING // SENATIB</span>
@@ -979,7 +984,7 @@
           </article>
 
           <!-- Publication 03: HAKI / Intellectual Property -->
-          <article class="research-card ip-card">
+          <article class="research-card ip-card reveal-on-scroll stagger-3 interactive-card">
             <div>
               <div class="research-card-header">
                 <span class="research-type-badge lime">REGISTERED COPYRIGHT // KEMDIKTISAINTEK</span>
@@ -1029,7 +1034,7 @@
         <div class="story-grid-layout">
           
           <!-- Left side: Narrative story & compact list -->
-          <div class="story-narrative-column">
+          <div class="story-narrative-column reveal-on-scroll">
             <div class="section-badge">07 // THE PERSON BEHIND THE WORK.</div>
             
             <h2 class="section-title-large" style="margin-bottom: 0.5rem;">
@@ -1066,7 +1071,7 @@
           </div>
 
           <!-- Right side: Large portrait with blue-purple frame -->
-          <div class="story-portrait-column">
+          <div class="story-portrait-column reveal-on-scroll stagger-2">
             <div class="story-portrait-frame">
               <img src="./profil.jpg" alt="Nanda Ari Wahyu Widagdo" loading="lazy">
             </div>
@@ -1082,7 +1087,7 @@
     <section id="journey" class="section-wrapper darker-bg">
       <div class="container">
         
-        <div class="section-meta-header" style="text-align: center; max-width: 640px; margin-inline: auto;">
+        <div class="section-meta-header reveal-on-scroll" style="text-align: center; max-width: 640px; margin-inline: auto;">
           <div class="section-badge">08 // JOURNEY SO FAR.</div>
           <h2 class="section-title-large">
             MY JOURNEY.<br>
@@ -1096,9 +1101,9 @@
         <div class="journey-timeline-track">
           
           <!-- Milestone 1: Registered Copyright (HAKI) -->
-          <div class="timeline-milestone academic">
+          <div class="timeline-milestone academic reveal-on-scroll">
             <div class="milestone-node"></div>
-            <div class="milestone-card">
+            <div class="milestone-card interactive-card">
               <div class="milestone-header-row">
                 <h3 class="milestone-role-title">Inventor &amp; Software Architect — Official Copyright (HAKI)</h3>
                 <span class="milestone-date-badge">2025</span>
@@ -1111,9 +1116,9 @@
           </div>
 
           <!-- Milestone 2: Student VP -->
-          <div class="timeline-milestone">
+          <div class="timeline-milestone reveal-on-scroll">
             <div class="milestone-node"></div>
-            <div class="milestone-card">
+            <div class="milestone-card interactive-card">
               <div class="milestone-header-row">
                 <h3 class="milestone-role-title">Student Executive Vice President</h3>
                 <span class="milestone-date-badge">2024 - 2025</span>
@@ -1126,9 +1131,9 @@
           </div>
 
           <!-- Milestone 3: Solvia Nova -->
-          <div class="timeline-milestone">
+          <div class="timeline-milestone reveal-on-scroll">
             <div class="milestone-node"></div>
-            <div class="milestone-card">
+            <div class="milestone-card interactive-card">
               <div class="milestone-header-row">
                 <h3 class="milestone-role-title">Founder &amp; Digital Solutions Developer</h3>
                 <span class="milestone-date-badge">2024 - Present</span>
@@ -1141,9 +1146,9 @@
           </div>
 
           <!-- Milestone 4: IC-ITECHS Research Paper -->
-          <div class="timeline-milestone academic">
+          <div class="timeline-milestone academic reveal-on-scroll">
             <div class="milestone-node"></div>
-            <div class="milestone-card">
+            <div class="milestone-card interactive-card">
               <div class="milestone-header-row">
                 <h3 class="milestone-role-title">Lead Author — International Journal Research Paper</h3>
                 <span class="milestone-date-badge">Dec 2024</span>
@@ -1156,9 +1161,9 @@
           </div>
 
           <!-- Milestone 5: SENATIB Research Paper -->
-          <div class="timeline-milestone academic">
+          <div class="timeline-milestone academic reveal-on-scroll">
             <div class="milestone-node"></div>
-            <div class="milestone-card">
+            <div class="milestone-card interactive-card">
               <div class="milestone-header-row">
                 <h3 class="milestone-role-title">Co-Author — National Conference Proceeding</h3>
                 <span class="milestone-date-badge">2024</span>
@@ -1171,9 +1176,9 @@
           </div>
 
           <!-- Milestone 6: Freelance Digital Marketing -->
-          <div class="timeline-milestone">
+          <div class="timeline-milestone reveal-on-scroll">
             <div class="milestone-node"></div>
-            <div class="milestone-card">
+            <div class="milestone-card interactive-card">
               <div class="milestone-header-row">
                 <h3 class="milestone-role-title">Freelance Digital Marketing Strategist</h3>
                 <span class="milestone-date-badge">2024 - 2025</span>
@@ -1186,9 +1191,9 @@
           </div>
 
           <!-- Milestone 7: UNTIRTA Speaker -->
-          <div class="timeline-milestone">
+          <div class="timeline-milestone reveal-on-scroll">
             <div class="milestone-node"></div>
-            <div class="milestone-card">
+            <div class="milestone-card interactive-card">
               <div class="milestone-header-row">
                 <h3 class="milestone-role-title">Speaker &amp; Web Development Instructor</h3>
                 <span class="milestone-date-badge">2024</span>
@@ -1201,9 +1206,9 @@
           </div>
 
           <!-- Milestone 8: Faculty Division Coordinator -->
-          <div class="timeline-milestone">
+          <div class="timeline-milestone reveal-on-scroll">
             <div class="milestone-node"></div>
-            <div class="milestone-card">
+            <div class="milestone-card interactive-card">
               <div class="milestone-header-row">
                 <h3 class="milestone-role-title">Faculty Division Coordinator</h3>
                 <span class="milestone-date-badge">2023 - 2024</span>
@@ -1216,9 +1221,9 @@
           </div>
 
           <!-- Milestone 9: Teaching Assistant -->
-          <div class="timeline-milestone">
+          <div class="timeline-milestone reveal-on-scroll">
             <div class="milestone-node"></div>
-            <div class="milestone-card">
+            <div class="milestone-card interactive-card">
               <div class="milestone-header-row">
                 <h3 class="milestone-role-title">Teaching Assistant &amp; Lab Instructor</h3>
                 <span class="milestone-date-badge">2023</span>
@@ -1231,9 +1236,9 @@
           </div>
 
           <!-- Milestone 10: Education Degree -->
-          <div class="timeline-milestone academic">
+          <div class="timeline-milestone academic reveal-on-scroll">
             <div class="milestone-node"></div>
-            <div class="milestone-card">
+            <div class="milestone-card interactive-card">
               <div class="milestone-header-row">
                 <h3 class="milestone-role-title">Bachelor of Applied Software Engineering (D4 TRPL)</h3>
                 <span class="milestone-date-badge">Graduated &bull; GPA 3.95 (Cum Laude)</span>
@@ -1254,7 +1259,7 @@
          ======================================================================= -->
     <section id="solvia-nova" class="section-wrapper darker-bg">
       <div class="container">
-        <div class="solvia-nova-container">
+        <div class="solvia-nova-container reveal-on-scroll interactive-card">
           <div class="solvia-nova-grid">
             
             <!-- Left Narrative -->
@@ -1329,14 +1334,14 @@
     <section id="contact" class="section-wrapper">
       <div class="container">
         
-        <div class="section-meta-header">
+        <div class="section-meta-header reveal-on-scroll">
           <div class="section-badge lime">10 // LET'S CONNECT.</div>
         </div>
 
         <div class="contact-layout-split">
           
           <!-- High-impact blue-purple gradient CTA panel -->
-          <div class="contact-gradient-cta-panel">
+          <div class="contact-gradient-cta-panel reveal-on-scroll interactive-card">
             <div>
               <div class="cta-lime-mini-label">DIRECT COLLABORATION</div>
               <h2 class="cta-display-headline">
@@ -1359,7 +1364,7 @@
           </div>
 
           <!-- Beside CTA: Compact contact rows & Quick transmission form -->
-          <div class="contact-actions-column">
+          <div class="contact-actions-column reveal-on-scroll stagger-2">
             
             <!-- Email Row -->
             <a href="mailto:nandaariwahyu07@gmail.com" class="contact-row-card">
@@ -1434,7 +1439,7 @@
   <!-- =========================================================================
        SECTION 11 — FOOTER
        ========================================================================= -->
-  <footer class="site-footer">
+  <footer class="site-footer reveal-on-scroll">
     <div class="container">
       
       <div class="footer-top-row">
