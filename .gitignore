@@ -3,3 +3,6 @@
 
 # Ada Library Information
 *.ali
+
+# Local helper scripts
+push.bat
